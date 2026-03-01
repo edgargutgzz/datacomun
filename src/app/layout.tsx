@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Nunito } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const dmSans = DM_Sans({
+const nunito = Nunito({
   variable: "--font-sans-var",
   subsets: ["latin"],
   display: "swap",
@@ -24,11 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable}`}>
+    <html lang="en" className={`${nunito.variable}`}>
       <body className="flex min-h-screen flex-col font-sans">
-          {children}
-          <Analytics />
-        </body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
