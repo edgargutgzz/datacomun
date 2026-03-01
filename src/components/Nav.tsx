@@ -17,7 +17,7 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-5xl items-center justify-between">
         <Link
           href="/"
-          className="font-mono text-sm font-medium tracking-tight uppercase"
+          className="text-sm font-medium tracking-tight"
         >
           Datacomun
         </Link>
