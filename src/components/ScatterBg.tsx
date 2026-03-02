@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react";
 
-const POINT_COUNT = 120;
-const CLUSTER_COUNT = 5;
+const POINT_COUNT = 180;
+const CLUSTER_COUNT = 10;
 const BG = "#f5f3ff";
 const COLORS = [
   [139, 92, 246],   // violet
