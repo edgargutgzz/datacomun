@@ -1,18 +1,14 @@
-import Image from "next/image";
+import VantaGlobe from "@/components/VantaGlobe";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center gap-2">
-      <Image
-        src="/logo.svg"
-        alt="data comun logo"
-        width={120}
-        height={120}
-        priority
-      />
-      <h1 className="text-5xl tracking-widest">
-        data comun
-      </h1>
-    </div>
+    <>
+      <VantaGlobe />
+      <div className="flex min-h-screen items-center justify-center">
+        <h1 className="text-5xl tracking-widest text-white">
+          data comun
+        </h1>
+      </div>
+    </>
   );
 }
