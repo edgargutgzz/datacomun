@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <ScatterBg />
       <div className="relative flex min-h-screen items-center justify-center">
-        <h1 className="text-5xl tracking-widest text-[#111111]">
+        <h1 className="text-3xl md:text-5xl tracking-widest text-[#111111]">
           data comun
         </h1>
         <footer className="absolute bottom-8">
