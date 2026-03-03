@@ -5,7 +5,7 @@ const projects = [
     title: "Observatorio del Aire",
     client: "OCCAMM · Monterrey, México",
     description:
-      "Los datos de calidad del aire en Monterrey eran públicos pero ilegibles. Construimos un dashboard interactivo que traduce más de 90,000 mediciones históricas de SINAICA en algo que cualquier ciudadano puede entender: ¿cuántos días al año respiras aire insalubre?",
+      "Los datos de calidad del aire en Monterrey eran públicos pero ilegibles. Desarrollamos la plataforma completa — sitio web, secciones de proyectos y publicaciones, y un dashboard de datos que traduce más de 90,000 mediciones de SINAICA en algo legible para cualquier ciudadano: ¿cuántos días al año respiras aire insalubre?",
     stats: [
       { value: "+5,200", label: "visitantes" },
       { value: "15", label: "estaciones" },
@@ -15,16 +15,38 @@ const projects = [
     image: "/observatorio-del-aire.png",
     imageAlt: "Observatorio del Aire — gráfica de días insalubres por mes",
   },
-  // {
-  //   number: "02",
-  //   tags: "Mapa interactivo · Tiempo real",
-  //   title: "Aire Claro",
-  //   description:
-  //     "Mapa en tiempo real de sensores de calidad del aire en Monterrey. Integración de datos de Purple Air con visualización geoespacial y recomendaciones de salud.",
-  //   href: "https://www.aireclaro.com/",
-  //   image: "/aire-claro.png",
-  //   imageAlt: "Aire Claro — mapa de sensores de calidad del aire en Monterrey",
-  // },
+  {
+    number: "02",
+    tags: "Mapa interactivo · Tiempo real",
+    title: "Aire Claro",
+    client: "OCCAMM · Monterrey, México",
+    description:
+      "Las estaciones oficiales miden el historial — pero no te dicen qué hacer ahora. Aire Claro es un mapa en tiempo real de más de 50 sensores ciudadanos Purple Air distribuidos por la ZMM, con recomendaciones de salud basadas en el Índice de Calidad del Aire.",
+    stats: [
+      { value: "+9,500", label: "visitantes" },
+      { value: "50+", label: "sensores" },
+      { value: "2M+", label: "mediciones" },
+    ],
+    href: "https://www.aireclaro.com/",
+    image: "/aire-claro.png",
+    imageAlt: "Aire Claro — mapa de sensores de calidad del aire en Monterrey",
+  },
+  {
+    number: "03",
+    tags: "Cartografía · Género y territorio",
+    title: "Territoria",
+    client: "Georregias · Monterrey, México",
+    description:
+      "Los reportes oficiales de violencia de género en Monterrey no reflejaban lo que las mujeres vivían en la calle. Construimos un mapa interactivo con 4 capas de datos — reportes 911, encuestas ciudadanas, zonas de riesgo y zonas seguras — para comparar el dato oficial con la experiencia real de quienes transitan la ciudad.",
+    stats: [
+      { value: "4", label: "capas de datos" },
+      { value: "2", label: "fuentes" },
+      { value: "ZMM", label: "cobertura" },
+    ],
+    href: "https://www.georregias.com/territoria",
+    image: "/georregias.jpg",
+    imageAlt: "Georregias — presentación del mapa Datos + Territorio",
+  },
 ];
 
 export default function Home() {
@@ -56,14 +78,11 @@ export default function Home() {
       <section className="px-8 pb-32">
         <div className="border-t border-[#e0ddd8] mb-16" />
 
-        <div className="space-y-6">
+        <div className="space-y-28">
           {projects.map((project) => (
-            <a
+            <div
               key={project.number}
-              href={project.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block bg-white border border-[#e0ddd8] rounded-2xl overflow-hidden hover:border-[#c8c4be] transition-colors duration-300"
+              className="bg-white border border-[#e0ddd8] rounded-2xl overflow-hidden"
             >
               <div className="grid md:grid-cols-2">
 
@@ -72,7 +91,7 @@ export default function Home() {
                   <img
                     src={project.image}
                     alt={project.imageAlt}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
 
@@ -105,15 +124,28 @@ export default function Home() {
                         ))}
                       </div>
                     )}
-                    <div className="mt-6 flex items-center gap-2 text-sm text-[#111111]">
-                      <span className="group-hover:underline underline-offset-4">Ver proyecto</span>
-                      <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    <div className="mt-6">
+                      {project.href ? (
+                        <a
+                          href={project.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group/link inline-flex items-center gap-2 text-sm text-[#111111] hover:underline underline-offset-4"
+                        >
+                          Ver proyecto
+                          <span className="transition-transform duration-300 group-hover/link:translate-x-1">→</span>
+                        </a>
+                      ) : (
+                        <span className="inline-flex items-center gap-2 text-sm text-[#111111]">
+                          Ver proyecto →
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
 
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </section>
