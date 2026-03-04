@@ -85,7 +85,7 @@ export default function GeorregiasPage() {
     active[id] ? "visible" : "none";
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden">
+    <div className="fixed inset-0">
       <Map
         mapStyle={MAP_STYLE}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}

@@ -46,6 +46,7 @@ const projects = [
       { value: "ZMM", label: "cobertura" },
     ],
     href: "/georregias",
+    external: true,
     image: "/georregias.jpg",
     imageAlt: "Georregias — presentación del mapa Datos + Territorio",
   },
