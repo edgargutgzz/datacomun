@@ -12,6 +12,7 @@ const projects = [
       { value: "90,000+", label: "mediciones" },
     ],
     href: "https://www.observatoriodelaire.com/datos",
+    external: true,
     image: "/observatorio-del-aire.png",
     imageAlt: "Observatorio del Aire — gráfica de días insalubres por mes",
   },
@@ -28,6 +29,7 @@ const projects = [
       { value: "2M+", label: "mediciones" },
     ],
     href: "https://www.aireclaro.com/",
+    external: true,
     image: "/aire-claro.png",
     imageAlt: "Aire Claro — mapa de sensores de calidad del aire en Monterrey",
   },
@@ -43,7 +45,7 @@ const projects = [
       { value: "2", label: "fuentes" },
       { value: "ZMM", label: "cobertura" },
     ],
-    href: "https://www.georregias.com/territoria",
+    href: "/georregias",
     image: "/georregias.jpg",
     imageAlt: "Georregias — presentación del mapa Datos + Territorio",
   },
@@ -128,8 +130,7 @@ export default function Home() {
                       {project.href ? (
                         <a
                           href={project.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          {...(project.external && { target: "_blank", rel: "noopener noreferrer" })}
                           className="group/link inline-flex items-center gap-2 text-sm text-[#111111] hover:underline underline-offset-4"
                         >
                           Ver proyecto
