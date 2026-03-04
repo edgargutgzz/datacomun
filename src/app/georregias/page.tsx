@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Map, { Source, Layer } from "react-map-gl/mapbox";
+import type { FeatureCollection, Point as GeoPoint } from "geojson";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 const MAP_STYLE = "mapbox://styles/mapbox/light-v11";
@@ -16,10 +17,10 @@ const LAYER_CONFIG: { id: LayerId; label: string; color: string }[] = [
   { id: "seguro", label: "Percepción segura", color: "#16A34A" },
 ];
 
-type Point = { lat: number; lng: number; name: string };
-type GeoJSON = { type: "FeatureCollection"; features: object[] };
+type DataPoint = { lat: number; lng: number; name: string };
+type FC = FeatureCollection<GeoPoint>;
 
-function parseCSV(text: string): Point[] {
+function parseCSV(text: string): DataPoint[] {
   const lines = text.trim().split("\n");
   const headers = lines[0].split(",").map((h) => h.trim());
   return lines.slice(1).flatMap((line) => {
@@ -33,7 +34,7 @@ function parseCSV(text: string): Point[] {
   });
 }
 
-function toGeoJSON(points: Point[]): GeoJSON {
+function toGeoJSON(points: DataPoint[]): FC {
   return {
     type: "FeatureCollection",
     features: points.map((p) => ({
@@ -44,7 +45,7 @@ function toGeoJSON(points: Point[]): GeoJSON {
   };
 }
 
-const EMPTY: GeoJSON = { type: "FeatureCollection", features: [] };
+const EMPTY: FC = { type: "FeatureCollection", features: [] };
 
 export default function GeorregiasPage() {
   const [active, setActive] = useState<Record<LayerId, boolean>>({
@@ -54,7 +55,7 @@ export default function GeorregiasPage() {
     seguro: true,
   });
 
-  const [data, setData] = useState<Record<LayerId, GeoJSON>>({
+  const [data, setData] = useState<Record<LayerId, FC>>({
     metro: EMPTY,
     reportes: EMPTY,
     inseguro: EMPTY,
