@@ -39,6 +39,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Hide Mapbox controls */
+.mapboxgl-ctrl,
+.mapboxgl-ctrl-group,
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib,
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  display: none !important;
+}
+
 /* Focus visible for accessibility */
 :focus-visible {
   outline: 2px solid var(--color-accent);
