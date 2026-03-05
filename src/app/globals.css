@@ -49,6 +49,31 @@ body {
   display: none !important;
 }
 
+/* Logo color cycle */
+@keyframes colorCycle {
+  0%   { color: #06b6d4; }
+  33%  { color: #8b5cf6; }
+  66%  { color: #ec4899; }
+  100% { color: #06b6d4; }
+}
+
+.logo-comun {
+  color: #06b6d4;
+  animation: colorCycle 6s ease-in-out infinite;
+}
+
+@keyframes borderColorCycle {
+  0%   { border-color: #06b6d4; }
+  33%  { border-color: #8b5cf6; }
+  66%  { border-color: #ec4899; }
+  100% { border-color: #06b6d4; }
+}
+
+.cta-border {
+  border-color: #06b6d4;
+  animation: borderColorCycle 6s ease-in-out infinite;
+}
+
 /* Focus visible for accessibility */
 :focus-visible {
   outline: 2px solid var(--color-accent);

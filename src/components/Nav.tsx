@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 
 const links = [
   { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -15,12 +15,7 @@ export default function Nav() {
   return (
     <header className="border-b border-[var(--color-border)] px-6 py-4">
       <nav className="mx-auto flex max-w-5xl items-center justify-between">
-        <Link
-          href="/"
-          className="text-xl tracking-tight"
-        >
-          <span className="font-bold" style={{color:"#0f172a"}}>data</span><span className="font-bold" style={{color:"#06b6d4"}}>comun</span>
-        </Link>
+        <Logo />
 
         <ul className="flex items-center gap-8">
           {links.map(({ href, label }) => (
