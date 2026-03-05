@@ -61,7 +61,7 @@ export default function Home() {
 
       {/* Left column — nav + copy */}
       <div
-        className="relative flex flex-col"
+        className="relative flex flex-col overflow-hidden"
         style={{
           minHeight: "100vh",
           background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
@@ -70,23 +70,23 @@ export default function Home() {
         <GrainOverlay />
 
         {/* Nav */}
-        <header className="relative z-10 flex items-center justify-between px-10 py-7">
+        <header className="relative z-10 flex items-center justify-between px-6 md:px-10 py-7">
           <Logo size="text-xl" />
         </header>
 
         {/* Copy */}
-        <div className="relative z-10 flex flex-col justify-end flex-1 px-10 pb-16">
-          <h1 className="text-6xl md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
+        <div className="relative z-10 flex flex-col justify-end flex-1 px-6 md:px-10 pb-12 md:pb-16">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
             Plataformas de datos diseñadas para organizaciones de impacto
           </h1>
-          <p className="mt-6 text-lg text-[#475569] leading-relaxed">
+          <p className="mt-5 text-base md:text-lg text-[#475569] leading-relaxed">
             Mapas, dashboards y plataformas para ONGs, gobierno y organizaciones de impacto en México. Desarrollo ágil, entrega en semanas.
           </p>
-          <div className="mt-12">
+          <div className="mt-8 md:mt-12">
             <p className="text-xs text-[#888888] uppercase tracking-widest mb-2">¿Trabajamos juntos?</p>
             <a
               href="mailto:hola@datacomun.com"
-              className="cta-border group inline-flex items-center gap-3 text-[#0f172a] font-medium text-lg border-b-2 pb-1 hover:text-[#06b6d4] transition-colors"
+              className="cta-border group inline-flex items-center gap-3 text-[#0f172a] font-medium text-base md:text-lg border-b-2 pb-1 hover:text-[#06b6d4] transition-colors"
             >
               hola@datacomun.com
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -96,7 +96,7 @@ export default function Home() {
       </div>
 
       {/* Right column — image */}
-      <div className="overflow-hidden" style={{minHeight: "100vh"}}>
+      <div className="overflow-hidden min-h-[50vh] md:min-h-screen">
         <img
           src="/hero.jpg"
           alt="Datacomun — taller de datos con la comunidad"
