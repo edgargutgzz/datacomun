@@ -1,7 +1,9 @@
+
+
 const projects = [
   {
     number: "01",
-    tags: "Visualización de datos · Salud pública",
+    tags: "Visualización de datos · Calidad del Aire",
     title: "Observatorio del Aire",
     client: "OCCAMM · Monterrey, México",
     description:
@@ -55,30 +57,47 @@ const projects = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f9f7f4]">
-
-      {/* Header */}
-      <header className="flex items-center justify-between px-8 pt-8">
-        <span className="text-sm tracking-widest text-[#111111]">data comun</span>
-        <a
-          href="mailto:hola@datacomun.com"
-          className="text-sm tracking-widest text-[#888888] hover:text-[#111111] transition-colors"
-        >
-          hola@datacomun.com
-        </a>
+      {/* Nav */}
+      <header className="relative z-10 flex items-center justify-between px-10 py-7">
+        <span className="text-lg tracking-tight">
+          <span className="font-bold" style={{color:"#0f172a"}}>data</span><span className="font-bold" style={{color:"#06b6d4"}}>comun</span>
+        </span>
+        <nav className="flex items-center gap-10">
+          <a href="#work" className="text-sm text-[#888888] hover:text-[#111111] transition-colors">Proyectos</a>
+          <a href="/about" className="text-sm text-[#888888] hover:text-[#111111] transition-colors">Nosotros</a>
+          <a href="mailto:hola@datacomun.com" className="text-sm text-[#111111] font-medium hover:text-[#06b6d4] transition-colors">Contacto</a>
+        </nav>
       </header>
 
       {/* Hero */}
-      <section className="flex flex-col justify-end min-h-[80vh] px-8 pb-20">
-        <h1 className="text-5xl md:text-8xl font-light text-[#111111] leading-none tracking-tight max-w-4xl">
-          Visualizamos datos<br />para el bien<br />común.
-        </h1>
-        <p className="mt-6 text-sm text-[#888888] tracking-wide">
-          Diseño de datos para ciudades, organizaciones y territorios.
-        </p>
+      <section className="w-full grid md:grid-cols-[1fr_1.1fr]" style={{minHeight: "calc(100vh - 73px)"}}>
+
+        {/* Left — copy */}
+        <div className="flex flex-col justify-center px-10 py-16">
+          <h1 className="text-5xl md:text-6xl font-semibold text-[#0f172a] leading-[1.1] tracking-tight max-w-md">
+            Plataformas de datos para organizaciones con impacto social
+          </h1>
+          <p className="mt-6 text-base text-[#64748b] leading-relaxed max-w-sm">
+            Diseñamos plataformas de datos, mapas interactivos y dashboards para organizaciones civiles y de gobierno en México.
+          </p>
+          <a href="#work" className="mt-10 inline-flex items-center gap-2 text-sm font-medium text-[#0f172a] hover:text-[#06b6d4] transition-colors group">
+            Ver proyectos
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </a>
+        </div>
+
+        {/* Right — image */}
+        <div className="overflow-hidden" style={{maxHeight: "calc(100vh - 73px)"}}>
+          <img
+            src="/hero.jpg"
+            alt="Datacomun — taller de datos con la comunidad"
+            className="w-full h-full object-cover object-left"
+          />
+        </div>
       </section>
 
       {/* Work */}
-      <section className="px-8 pb-32">
+      <section id="work" className="px-8 pb-32">
         <div className="border-t border-[#e0ddd8] mb-16" />
 
         <div className="space-y-28">

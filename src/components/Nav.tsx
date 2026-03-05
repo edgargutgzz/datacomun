@@ -17,9 +17,9 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-5xl items-center justify-between">
         <Link
           href="/"
-          className="text-sm font-medium tracking-tight"
+          className="text-xl tracking-tight"
         >
-          Datacomun
+          <span className="font-bold" style={{color:"#0f172a"}}>data</span><span className="font-bold" style={{color:"#06b6d4"}}>comun</span>
         </Link>
 
         <ul className="flex items-center gap-8">

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const nunito = Nunito({
+const inter = Inter({
   variable: "--font-sans-var",
   subsets: ["latin"],
   display: "swap",
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${nunito.variable}`}>
+    <html lang="en" className={`${inter.variable}`}>
       <body className="flex min-h-screen flex-col font-sans">
         {children}
         <Analytics />
