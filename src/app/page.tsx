@@ -61,9 +61,8 @@ export default function Home() {
 
       {/* Left column — nav + copy */}
       <div
-        className="relative flex flex-col overflow-hidden"
+        className="relative flex flex-col overflow-hidden md:min-h-screen"
         style={{
-          minHeight: "100vh",
           background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
         }}
       >
@@ -75,7 +74,7 @@ export default function Home() {
         </header>
 
         {/* Copy */}
-        <div className="relative z-10 flex flex-col justify-end flex-1 px-6 md:px-10 pb-12 md:pb-16">
+        <div className="relative z-10 flex flex-col justify-end flex-1 px-6 md:px-10 pt-4 pb-12 md:pt-0 md:pb-16">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
             Plataformas de datos diseñadas para organizaciones de impacto
           </h1>
