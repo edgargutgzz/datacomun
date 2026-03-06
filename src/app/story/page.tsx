@@ -688,6 +688,114 @@ function F20() {
   );
 }
 
+// ── 20b: Retro — "impacto social primero" ─────────────────────────────────
+function F20b() {
+  return (
+    <div style={{ width: "100%", height: "100%", background: BG, display: "flex", flexDirection: "column", position: "relative" }}>
+      <header style={{ display: "flex", alignItems: "center", padding: "28px 40px", flexShrink: 0 }}>
+        <span style={{ fontSize: 16, fontWeight: 700, color: "#0f172a", letterSpacing: "-0.02em" }}>
+          data<span className="logo-comun">comun</span>
+        </span>
+      </header>
+      <div style={{ flex: 1, display: "flex", alignItems: "flex-end", padding: "0 40px 64px", width: "55%" }}>
+        <div>
+          <h1 style={{ fontSize: 64, fontWeight: 600, color: "#0f172a", lineHeight: 1.05, letterSpacing: "-0.02em" }}>Plataforma de datos para impacto social</h1>
+          <p style={{ marginTop: 20, fontSize: 16, color: "#475569", lineHeight: 1.6 }}>Mapas, dashboards y plataformas para ONGs y gobierno en México. Desarrollo ágil, entrega en semanas.</p>
+          <div style={{ marginTop: 48 }}>
+            <p style={{ fontSize: 10, color: "#888", textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: 8 }}>¿Trabajamos juntos?</p>
+            <span className="cta-border" style={{ fontSize: 18, fontWeight: 500, color: "#0f172a", borderBottom: "2px solid", paddingBottom: 4, display: "inline-flex", alignItems: "center", gap: 12 }}>hola@datacomun.com <span>→</span></span>
+          </div>
+        </div>
+      </div>
+      <Img />
+    </div>
+  );
+}
+
+// ── 20c: Título menciona comunidad, sin color ──────────────────────────────
+function F20c() {
+  return (
+    <div style={{ width: "100%", height: "100%", background: BG, display: "flex", flexDirection: "column", position: "relative" }}>
+      <header style={{ display: "flex", alignItems: "center", padding: "28px 40px", flexShrink: 0 }}>
+        <span style={{ fontSize: 16, fontWeight: 700, color: "#0f172a", letterSpacing: "-0.02em" }}>
+          data<span className="logo-comun">comun</span>
+        </span>
+      </header>
+      <div style={{ flex: 1, display: "flex", alignItems: "flex-end", padding: "0 40px 64px", width: "55%" }}>
+        <div>
+          <h1 style={{ fontSize: 64, fontWeight: 600, color: "#0f172a", lineHeight: 1.05, letterSpacing: "-0.02em" }}>Datos para organizaciones que transforman su comunidad</h1>
+          <p style={{ marginTop: 20, fontSize: 16, color: "#475569", lineHeight: 1.6 }}>Mapas, dashboards y plataformas para ONGs y gobierno en México. Desarrollo ágil, entrega en semanas.</p>
+          <div style={{ marginTop: 48 }}>
+            <p style={{ fontSize: 10, color: "#888", textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: 8 }}>¿Trabajamos juntos?</p>
+            <span className="cta-border" style={{ fontSize: 18, fontWeight: 500, color: "#0f172a", borderBottom: "2px solid", paddingBottom: 4, display: "inline-flex", alignItems: "center", gap: 12 }}>hola@datacomun.com <span>→</span></span>
+          </div>
+        </div>
+      </div>
+      <Img />
+    </div>
+  );
+}
+
+// ── 20d: Comunidad coloreada, subtítulo viejo ──────────────────────────────
+function F20d() {
+  return (
+    <div style={{ width: "100%", height: "100%", background: BG, display: "flex", flexDirection: "column", position: "relative" }}>
+      <header style={{ display: "flex", alignItems: "center", padding: "28px 40px", flexShrink: 0 }}>
+        <span style={{ fontSize: 16, fontWeight: 700, color: "#0f172a", letterSpacing: "-0.02em" }}>
+          data<span className="logo-comun">comun</span>
+        </span>
+      </header>
+      <div style={{ flex: 1, display: "flex", alignItems: "flex-end", padding: "0 40px 64px", width: "55%" }}>
+        <div>
+          <h1 style={{ fontSize: 64, fontWeight: 600, color: "#0f172a", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
+            Datos para organizaciones que transforman su <span className="logo-comun">comunidad</span>
+          </h1>
+          <p style={{ marginTop: 20, fontSize: 16, color: "#475569", lineHeight: 1.6 }}>Mapas, dashboards y plataformas para ONGs y gobierno en México. Desarrollo ágil, entrega en semanas.</p>
+          <div style={{ marginTop: 48 }}>
+            <p style={{ fontSize: 10, color: "#888", textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: 8 }}>¿Trabajamos juntos?</p>
+            <span className="cta-border" style={{ fontSize: 18, fontWeight: 500, color: "#0f172a", borderBottom: "2px solid", paddingBottom: 4, display: "inline-flex", alignItems: "center", gap: 12 }}>hola@datacomun.com <span>→</span></span>
+          </div>
+        </div>
+      </div>
+      <Img />
+    </div>
+  );
+}
+
+// ── 21: Final — igual que home ────────────────────────────────────────────
+function F21() {
+  return (
+    <div className="min-h-screen grid md:grid-cols-[1.2fr_0.8fr]" style={{ width: "100%", height: "100%" }}>
+      <div className="relative flex flex-col overflow-hidden md:min-h-screen" style={{ background: BG }}>
+        <header className="relative z-10 flex items-center justify-between px-6 md:px-10 py-7">
+          <span className="text-xl font-bold tracking-tight" style={{ color: "#0f172a" }}>
+            data<span className="logo-comun">comun</span>
+          </span>
+        </header>
+        <div className="relative z-10 flex flex-col justify-end flex-1 px-6 md:px-10 pt-4 pb-12 md:pt-0 md:pb-16">
+          <div className="w-fit">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
+              Datos para organizaciones que transforman su <span className="logo-comun">comunidad</span>
+            </h1>
+            <p className="mt-5 text-base md:text-lg text-[#475569] leading-relaxed text-balance">
+              Somos un estudio de visualización de datos y cartografía que convierte información compleja en herramientas claras y accionables.
+            </p>
+          </div>
+          <div className="mt-12 md:mt-16">
+            <p className="text-xs text-[#888888] uppercase tracking-widest mb-2">¿Trabajamos juntos?</p>
+            <span className="cta-border inline-flex items-center gap-3 text-[#0f172a] font-medium text-base md:text-lg border-b-2 pb-1">
+              hola@datacomun.com <span>→</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="overflow-hidden min-h-[50vh] md:min-h-screen">
+        <img src="/hero.jpg" alt="" className="w-full h-full object-cover object-[10%_center]" />
+      </div>
+    </div>
+  );
+}
+
 // ── Config ────────────────────────────────────────────────────────────────
 
 // Grupo 1 — exploración del nombre (solo "data comun")
@@ -696,7 +804,7 @@ const FRAMES = [
   // nombre
   F_a, F_b, F_c, F_d, F_e, F_1, F_2, F_3, F_4, FB, FC, F00b, FD, F00, F00c,
   // contenido
-  FE, FA, F00d, F01, F02, F03, F06, F09, F11, F13, F15,
+  FE, FA, F00d, F01, F02, F03, F06, F09, F11, F13, F15, F20b, F20c, F20d, F21,
 ];
 const HOLD = 300;
 
