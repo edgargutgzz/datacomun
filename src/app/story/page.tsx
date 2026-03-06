@@ -690,7 +690,14 @@ function F20() {
 
 // ── Config ────────────────────────────────────────────────────────────────
 
-const FRAMES = [F_a,F_b,F_c,F_d,F_e,F_1,F_2,F_3,F_4,FA,FB,FC,FD,FE,F00,F00b,F00c,F00d,F00e,F01,F02,F03,F06,F09,F11,F13,F15];
+// Grupo 1 — exploración del nombre (solo "data comun")
+// Grupo 2 — layout y contenido
+const FRAMES = [
+  // nombre
+  F_a, F_b, F_c, F_d, F_e, F_1, F_2, F_3, F_4, FB, FC, F00b, FD, F00, F00c,
+  // contenido
+  FE, FA, F00d, F01, F02, F03, F06, F09, F11, F13, F15,
+];
 const HOLD = 500;
 
 // ── Page ──────────────────────────────────────────────────────────────────
