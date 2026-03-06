@@ -79,13 +79,13 @@ export default function Home() {
             Plataformas de datos diseñadas para organizaciones de impacto
           </h1>
           <p className="mt-5 text-base md:text-lg text-[#475569] leading-relaxed">
-            Mapas, dashboards y plataformas para ONGs, gobierno y organizaciones de impacto en México. Desarrollo ágil, entrega en semanas.
+            Mapas, dashboards y plataformas para ONGs y gobierno en México. Desarrollo ágil, entrega en semanas.
           </p>
           <div className="mt-8 md:mt-12">
             <p className="text-xs text-[#888888] uppercase tracking-widest mb-2">¿Trabajamos juntos?</p>
             <a
               href="mailto:hola@datacomun.com"
-              className="cta-border group inline-flex items-center gap-3 text-[#0f172a] font-medium text-base md:text-lg border-b-2 pb-1 hover:text-[#06b6d4] transition-colors"
+              className="cta-border group inline-flex items-center gap-3 text-[#0f172a] font-medium text-base md:text-lg border-b-2 pb-1 hover:tracking-wide transition-all duration-300"
             >
               hola@datacomun.com
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
