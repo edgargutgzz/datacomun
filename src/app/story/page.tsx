@@ -708,14 +708,6 @@ export default function StoryPage() {
 
   return (
     <div className="w-screen flex flex-col overflow-hidden" style={{ height: "100dvh" }}>
-      <div className="flex items-center gap-2 px-4 shrink-0" style={{ background: "#1a1a1a", height: 36 }}>
-        <div className="rounded-full bg-[#ff5f57]" style={{ width: 11, height: 11 }} />
-        <div className="rounded-full bg-[#febc2e]" style={{ width: 11, height: 11 }} />
-        <div className="rounded-full bg-[#28c840]" style={{ width: 11, height: 11 }} />
-        <div className="flex-1 mx-auto rounded flex items-center justify-center" style={{ background: "#2a2a2a", height: 22, maxWidth: 320 }}>
-          <span style={{ fontSize: 11, color: "#666" }}>datacomun.com</span>
-        </div>
-      </div>
       <div className="flex-1 min-h-0">
         <Mock />
       </div>
