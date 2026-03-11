@@ -100,7 +100,7 @@ export default function Home() {
       <div className="overflow-hidden min-h-[50vh] md:min-h-screen">
         <img
           src="/hero.jpg"
-          alt="Datacomun — taller de datos con la comunidad"
+          alt="datacomun — taller de datos con la comunidad"
           className="w-full h-full object-cover object-[10%_center]"
         />
       </div>

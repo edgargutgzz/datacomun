@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Selected projects by Datacomun.",
+  description: "Selected projects by datacomun.",
 };
 
 export default function WorkPage() {

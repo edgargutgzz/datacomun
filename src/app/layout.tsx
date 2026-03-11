@@ -11,11 +11,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Datacomun — Data Design",
-    template: "%s | Datacomun",
+    default: "datacomun",
+    template: "%s | datacomun",
   },
   description:
-    "Datacomun is a data design firm that transforms complex data into clear, compelling visual communication.",
+    "datacomun is a data design firm that transforms complex data into clear, compelling visual communication.",
 };
 
 export default function RootLayout({

@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Datacomun.",
+  description: "Get in touch with datacomun.",
 };
 
 export default function ContactPage() {

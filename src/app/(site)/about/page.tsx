@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Datacomun — a data design firm.",
+  description: "About datacomun — a data design firm.",
 };
 
 export default function AboutPage() {
@@ -20,7 +20,7 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
         <div className="space-y-5 text-base leading-relaxed text-[var(--color-foreground)]">
           <p>
-            Datacomun is a data design firm. We work with organizations to make
+            datacomun is a data design firm. We work with organizations to make
             their data legible — through visualization, analysis, and
             communication design.
           </p>
