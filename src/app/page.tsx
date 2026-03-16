@@ -76,15 +76,16 @@ export default function Home() {
         {/* Copy */}
         <div className="relative z-10 flex flex-col justify-end flex-1 px-6 md:px-10 pt-4 pb-12 md:pt-0 md:pb-16">
           <div className="w-fit">
+            <p className="text-xs text-[#888888] uppercase tracking-widest mb-4">Data Design Studio</p>
             <h1 className="text-5xl sm:text-5xl md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
               Datos para organizaciones que transforman su <span className="logo-comun">comunidad</span>
             </h1>
             <p className="mt-5 text-base md:text-lg text-[#475569] leading-relaxed text-balance">
-              Somos un estudio de visualización de datos y cartografía que convierte información compleja en herramientas claras y accionables.
+              Somos un estudio de visualización de datos que convierte información compleja en herramientas claras, visuales y accionables.
             </p>
           </div>
           <div className="mt-12 md:mt-16">
-            <p className="text-xs text-[#888888] uppercase tracking-widest mb-2">¿Trabajamos juntos?</p>
+            <p className="text-xs text-[#888888] uppercase tracking-widest mb-2">¿Tu organización trabaja con datos? Platiquemos.</p>
             <a
               href="mailto:hola@datacomun.com"
               className="cta-border group inline-flex items-center gap-3 text-[#0f172a] font-medium text-base md:text-lg border-b-2 pb-1 hover:tracking-wide transition-all duration-300"
