@@ -76,8 +76,7 @@ export default function Home() {
         {/* Copy */}
         <div className="relative z-10 flex flex-col justify-end flex-1 px-6 md:px-10 pt-4 pb-12 md:pt-0 md:pb-16">
           <div className="w-fit">
-            <p className="text-xs text-[#888888] uppercase tracking-widest mb-4">Data Design Studio</p>
-            <h1 className="text-5xl sm:text-5xl md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
+<h1 className="text-5xl sm:text-5xl md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
               Datos para organizaciones que transforman su <span className="logo-comun">comunidad</span>
             </h1>
             <p className="mt-5 text-base md:text-lg text-[#475569] leading-relaxed text-balance">
