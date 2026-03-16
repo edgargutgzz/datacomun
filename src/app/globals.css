@@ -7,15 +7,9 @@
   --color-muted: #888888;
   --color-border: #e0ddd8;
   --color-accent: #1a1a2e;
-  --color-accent-light: #f0eefc;
 
   /* Typography */
   --font-sans: var(--font-sans-var);
-  --font-mono: var(--font-mono-var);
-
-  /* Spacing scale (for consistent rhythm) */
-  --spacing-section: 6rem;
-  --spacing-section-sm: 3rem;
 }
 
 :root {
