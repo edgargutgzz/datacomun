@@ -84,13 +84,12 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-12 md:mt-16">
-            <p className="text-xs text-[#888888] uppercase tracking-widest mb-2">¿Tu organización trabaja con datos? Platiquemos.</p>
+            <p className="text-xs text-[#888888] uppercase tracking-widest mb-2">Hablemos.</p>
             <a
               href="mailto:hola@datacomun.com"
-              className="cta-border group inline-flex items-center gap-3 text-[#0f172a] font-medium text-base md:text-lg border-b-2 pb-1 hover:tracking-wide transition-all duration-300"
+              className="cta-border inline-flex items-center gap-3 text-[#0f172a] font-medium text-base md:text-lg border-b-2 pb-1 cursor-default"
             >
               hola@datacomun.com
-              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
           </div>
         </div>
