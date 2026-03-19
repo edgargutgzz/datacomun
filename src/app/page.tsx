@@ -96,12 +96,15 @@ export default function Home() {
       </div>
 
       {/* Right column — image */}
-      <div className="overflow-hidden min-h-[50vh] md:min-h-screen">
+      <div className="relative overflow-hidden min-h-[50vh] md:min-h-screen">
         <img
           src="/hero.jpg"
           alt="datacomun — taller de datos con la comunidad"
           className="w-full h-full object-cover object-[10%_center]"
         />
+        <p className="absolute bottom-3 right-3 text-[10px] text-black/40 tracking-wide">
+          © Equipo de documentación LABNL
+        </p>
       </div>
 
     </div>
