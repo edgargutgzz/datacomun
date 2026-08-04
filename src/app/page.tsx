@@ -1,6 +1,57 @@
 import Logo from "@/components/Logo";
 import GrainOverlay from "@/components/GrainOverlay";
 
+const projects = [
+  {
+    number: "01",
+    tags: "Visualización de datos · Salud pública",
+    title: "Observatorio del Aire",
+    client: "OCCAMM · Monterrey, México",
+    description:
+      "Los datos de calidad del aire en Monterrey eran públicos pero ilegibles. Desarrollamos la plataforma completa — sitio web, secciones de proyectos y publicaciones, y un dashboard de datos que traduce más de 90,000 mediciones de SINAICA en algo legible para cualquier ciudadano: ¿cuántos días al año respiras aire insalubre?",
+    stats: [
+      { value: "+5,200", label: "visitantes" },
+      { value: "15", label: "estaciones" },
+      { value: "90,000+", label: "mediciones" },
+    ],
+    href: "https://www.observatoriodelaire.com/datos",
+    image: "/observatorio-del-aire.png",
+    imageAlt: "Observatorio del Aire — gráfica de días insalubres por mes",
+  },
+  {
+    number: "02",
+    tags: "Mapa interactivo · Tiempo real",
+    title: "Aire Claro",
+    client: "OCCAMM · Monterrey, México",
+    description:
+      "Aire Claro es un mapa en tiempo real que combina más de 50 sensores ciudadanos Purple Air con las estaciones oficiales de la red SIMA, distribuidos por toda la ZMM, con recomendaciones de salud basadas en el Índice de Calidad del Aire.",
+    stats: [
+      { value: "+9,500", label: "visitantes" },
+      { value: "50+", label: "sensores" },
+      { value: "2M+", label: "mediciones" },
+    ],
+    href: "https://www.aireclaro.com/",
+    image: "/aire-claro.png",
+    imageAlt: "Aire Claro — mapa de sensores ciudadanos y estaciones SIMA en Monterrey",
+  },
+  {
+    number: "03",
+    tags: "Cartografía · Género y territorio",
+    title: "Territoria",
+    client: "Georregias · Monterrey, México",
+    description:
+      "Los reportes oficiales de violencia de género en Monterrey no reflejaban lo que las mujeres vivían en la calle. Construimos un mapa interactivo con 4 capas de datos — reportes 911, encuestas ciudadanas, zonas de riesgo y zonas seguras — para comparar el dato oficial con la experiencia real de quienes transitan la ciudad.",
+    stats: [
+      { value: "4", label: "capas de datos" },
+      { value: "2", label: "fuentes" },
+      { value: "ZMM", label: "cobertura" },
+    ],
+    href: "https://wiki.labnuevoleon.mx/index.php?title=Territoria",
+    image: "/georregias.jpg",
+    imageAlt: "Georregias — presentación del mapa Datos + Territorio",
+  },
+];
+
 export default function Home() {
   return (
     <div>
@@ -58,6 +109,88 @@ export default function Home() {
         </div>
 
       </div>
+
+      {/* Trabajo */}
+      <section id="trabajo" className="px-6 md:px-10 py-20 md:py-28 bg-[#f9f7f4]">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-xs text-[#888888] uppercase tracking-widest mb-3">
+            Trabajo
+          </p>
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#0f172a] tracking-tight mb-16">
+            Proyectos seleccionados
+          </h2>
+
+          <div className="space-y-20">
+            {projects.map((project) => {
+              const isExternal = project.href.startsWith("http");
+              return (
+                <div
+                  key={project.number}
+                  className="border border-[#e0ddd8] rounded-2xl overflow-hidden"
+                >
+                  <div className="grid md:grid-cols-2">
+                    <div className="overflow-hidden aspect-[4/3] border-b md:border-b-0 md:border-r border-[#e0ddd8]">
+                      <img
+                        src={project.image}
+                        alt={project.imageAlt}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+
+                    <div className="flex flex-col justify-between p-8">
+                      <div>
+                        <div className="flex items-center justify-between mb-6">
+                          <p className="text-xs uppercase tracking-widest text-[#888888]">
+                            {project.tags}
+                          </p>
+                          <span className="text-xs text-[#888888]">
+                            {project.number}
+                          </span>
+                        </div>
+                        <h3 className="text-3xl font-semibold text-[#0f172a] tracking-tight">
+                          {project.title}
+                        </h3>
+                        <p className="mt-2 text-xs text-[#888888] tracking-wide">
+                          {project.client}
+                        </p>
+                        <p className="mt-5 text-sm text-[#475569] leading-relaxed">
+                          {project.description}
+                        </p>
+                      </div>
+
+                      <div>
+                        <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-[#e0ddd8]">
+                          {project.stats.map((stat) => (
+                            <div key={stat.label}>
+                              <p className="text-xl font-semibold text-[#0f172a]">
+                                {stat.value}
+                              </p>
+                              <p className="text-xs text-[#888888] mt-0.5">
+                                {stat.label}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="mt-6">
+                          <a
+                            href={project.href}
+                            target={isExternal ? "_blank" : undefined}
+                            rel={isExternal ? "noopener noreferrer" : undefined}
+                            className="inline-flex items-center gap-2 text-sm text-[#0f172a] hover:underline underline-offset-4"
+                          >
+                            Ver proyecto
+                            <span aria-hidden>→</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
     </div>
   );

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | datacomun",
   },
   description:
-    "datacomun is a data design firm that transforms complex data into clear, compelling visual communication.",
+    "datacomun es un estudio de diseño de datos que convierte información compleja en comunicación visual clara y efectiva.",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
+    <html lang="es" className={`${inter.variable}`}>
       <body className="flex min-h-screen flex-col font-sans">
         {children}
         <Analytics />
