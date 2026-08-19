@@ -103,15 +103,41 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-16 pt-10 border-t border-[#e0ddd8]">
-            <p className="text-base text-[#475569]">Hablemos de tu proyecto.</p>
-            <a
-              href="mailto:edgar@datacomun.com"
-              className="cta-border mt-2 inline-flex items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1"
-            >
-              edgar@datacomun.com
-            </a>
+        </div>
+      </section>
+
+      {/* About me */}
+      <section className="px-6 md:px-10 py-24 md:py-32 bg-[#f9f7f4]">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center sm:items-start gap-8 text-center sm:text-left">
+          <img
+            src="/edgar.jpg"
+            alt="Edgar Gutiérrez"
+            className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover shrink-0"
+          />
+          <div>
+            <p className="text-lg md:text-xl text-[#0f172a] leading-relaxed">
+              Soy Edgar Gutiérrez. Hago mapas desde Monterrey.
+            </p>
+            <p className="mt-3 text-base md:text-lg text-[#475569] italic leading-relaxed">
+              Llevo tres años construyendo y operando la plataforma del Observatorio del Aire. Todo lo que ves aquí lo hice yo: el diseño, el código y el sistema que corre cada hora detrás del mapa.
+            </p>
+            <p className="mt-3 text-base md:text-lg text-[#475569] italic leading-relaxed">
+              Si trabajas conmigo, trabajas conmigo — no hay equipo intermedio.
+            </p>
           </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="px-6 md:px-10 pb-24 md:pb-32 bg-[#f9f7f4]">
+        <div className="max-w-5xl mx-auto pt-10 border-t border-[#e0ddd8]">
+          <p className="text-base text-[#475569]">Hablemos de tu proyecto.</p>
+          <a
+            href="mailto:edgar@datacomun.com"
+            className="cta-border mt-2 inline-flex items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1"
+          >
+            edgar@datacomun.com
+          </a>
         </div>
       </section>
 
