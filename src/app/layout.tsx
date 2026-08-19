@@ -9,13 +9,32 @@ const inter = Inter({
   display: "swap",
 });
 
+const title = "datacomun";
+const description =
+  "datacomun diseña, construye y opera mapas y plataformas de datos para organizaciones que trabajan temas públicos.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://datacomun.com"),
   title: {
-    default: "datacomun",
+    default: title,
     template: "%s | datacomun",
   },
-  description:
-    "datacomun es un estudio de diseño de datos que convierte información compleja en comunicación visual clara y efectiva.",
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://datacomun.com",
+    siteName: "datacomun",
+    locale: "es_MX",
+    type: "website",
+    images: ["/hero.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/hero.jpg"],
+  },
 };
 
 export default function RootLayout({
