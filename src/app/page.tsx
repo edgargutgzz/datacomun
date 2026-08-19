@@ -75,18 +75,43 @@ export default function Home() {
             />
           </div>
 
-          <div className="mt-24 grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#e0ddd8]">
+          {/* Coverage pictogram — sensores vs estaciones, drawn to the same scale */}
+          <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-2xl mx-auto">
             {[
-              { value: "152", label: "Sensores Ciudadanos" },
-              { value: "16", label: "Estaciones SIMA" },
+              { value: "152", label: "Sensores Ciudadanos", dots: 76, color: "#06b6d4" },
+              { value: "16", label: "Estaciones SIMA", dots: 8, color: "#8b5cf6" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="flex flex-wrap content-start justify-center gap-1 h-[72px] max-w-[180px] mx-auto">
+                  {Array.from({ length: stat.dots }).map((_, i) => (
+                    <span
+                      key={i}
+                      className="w-2 h-2 rounded-full shrink-0"
+                      style={{ backgroundColor: stat.color }}
+                    />
+                  ))}
+                </div>
+                <p className="mt-4 text-4xl font-semibold text-[#0f172a] tracking-tight">
+                  {stat.value}
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-widest text-[#888888]">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Reach */}
+          <div className="mt-16 grid grid-cols-2 divide-x divide-[#e0ddd8] max-w-xs mx-auto">
+            {[
               { value: "16,475", label: "Visitantes" },
               { value: "41,201", label: "Vistas" },
             ].map((stat) => (
-              <div key={stat.label} className="text-center py-6 sm:py-0 sm:px-6 first:pl-0 last:pr-0">
-                <p className="text-4xl md:text-6xl font-semibold text-[#0f172a] tracking-tight">
+              <div key={stat.label} className="text-center px-6">
+                <p className="text-3xl md:text-4xl font-semibold text-[#0f172a] tracking-tight">
                   {stat.value}
                 </p>
-                <p className="mt-2 text-xs uppercase tracking-widest text-[#888888]">
+                <p className="mt-1 text-xs uppercase tracking-widest text-[#888888]">
                   {stat.label}
                 </p>
               </div>
