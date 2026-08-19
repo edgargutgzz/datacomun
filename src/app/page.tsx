@@ -75,16 +75,20 @@ export default function Home() {
             />
           </div>
 
-          <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div className="mt-24 grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#e0ddd8]">
             {[
-              { value: "152", label: "sensores Purple Air" },
-              { value: "16", label: "estaciones SIMA" },
-              { value: "16,475", label: "visitantes" },
-              { value: "41,201", label: "vistas" },
+              { value: "152", label: "Sensores Purple Air" },
+              { value: "16", label: "Estaciones SIMA" },
+              { value: "16,475", label: "Visitantes" },
+              { value: "41,201", label: "Vistas" },
             ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-2xl font-semibold text-[#0f172a]">{stat.value}</p>
-                <p className="text-xs text-[#888888] mt-0.5">{stat.label}</p>
+              <div key={stat.label} className="text-center py-6 sm:py-0 sm:px-6 first:pl-0 last:pr-0">
+                <p className="text-4xl md:text-6xl font-semibold text-[#0f172a] tracking-tight">
+                  {stat.value}
+                </p>
+                <p className="mt-2 text-xs uppercase tracking-widest text-[#888888]">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
