@@ -36,10 +36,10 @@ export default function Home() {
             <div className="mt-12 md:mt-16">
               <p className="text-xs text-[#888888] uppercase tracking-widest mb-2">Hablemos.</p>
               <a
-                href="mailto:hola@datacomun.com"
+                href="mailto:edgar@datacomun.com"
                 className="cta-border inline-flex items-center gap-3 text-[#0f172a] font-medium text-base md:text-lg border-b-2 pb-1 cursor-default"
               >
-                hola@datacomun.com
+                edgar@datacomun.com
               </a>
             </div>
           </div>
