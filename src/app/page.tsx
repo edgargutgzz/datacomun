@@ -77,7 +77,7 @@ export default function Home() {
 
           <div className="mt-24 grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#e0ddd8]">
             {[
-              { value: "152", label: "Sensores Purple Air" },
+              { value: "152", label: "Sensores Ciudadanos" },
               { value: "16", label: "Estaciones SIMA" },
               { value: "16,475", label: "Visitantes" },
               { value: "41,201", label: "Vistas" },
