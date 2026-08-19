@@ -1,5 +1,6 @@
 import Logo from "@/components/Logo";
 import GrainOverlay from "@/components/GrainOverlay";
+import DotPictogram from "@/components/DotPictogram";
 
 export default function Home() {
   return (
@@ -76,29 +77,13 @@ export default function Home() {
           </div>
 
           {/* Coverage pictogram — sensores vs estaciones, drawn to the same scale */}
-          <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-2xl mx-auto">
-            {[
-              { value: "152", label: "Sensores Ciudadanos", dots: 76, color: "#06b6d4" },
-              { value: "16", label: "Estaciones SIMA", dots: 8, color: "#8b5cf6" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="flex flex-wrap content-start justify-center gap-1 h-[72px] max-w-[180px] mx-auto">
-                  {Array.from({ length: stat.dots }).map((_, i) => (
-                    <span
-                      key={i}
-                      className="w-2 h-2 rounded-full shrink-0"
-                      style={{ backgroundColor: stat.color }}
-                    />
-                  ))}
-                </div>
-                <p className="mt-4 text-4xl font-semibold text-[#0f172a] tracking-tight">
-                  {stat.value}
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-widest text-[#888888]">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
+          <div className="mt-24">
+            <DotPictogram
+              stats={[
+                { value: "152", label: "Sensores Ciudadanos", dots: 76, color: "#06b6d4" },
+                { value: "16", label: "Estaciones SIMA", dots: 8, color: "#8b5cf6" },
+              ]}
+            />
           </div>
 
           {/* Reach */}
