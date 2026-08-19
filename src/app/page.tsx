@@ -54,7 +54,7 @@ export default function Home() {
             Aire Claro
           </h2>
           <p className="mt-4 text-lg md:text-xl text-[#475569]">
-            Calidad del aire en tiempo real para Monterrey.
+            Datos para mejorar la calidad del aire en Nuevo León.
           </p>
           <a
             href="https://www.aireclaro.com/"
