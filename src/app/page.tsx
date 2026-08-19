@@ -29,9 +29,6 @@ export default function Home() {
               <h1 className="text-5xl sm:text-5xl md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
                 Mapas y plataformas para organizaciones que transforman su <span className="logo-comun">comunidad</span>
               </h1>
-              <p className="mt-5 text-base md:text-lg text-[#475569] leading-relaxed text-balance">
-                Diseño, construyo y opero mapas y plataformas de datos para organizaciones que trabajan temas públicos.
-              </p>
             </div>
             <div className="mt-12 md:mt-16">
               <p className="text-xs text-[#888888] uppercase tracking-widest mb-2">Hablemos.</p>
