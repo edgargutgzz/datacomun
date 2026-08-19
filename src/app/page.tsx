@@ -47,6 +47,38 @@ export default function Home() {
 
       </div>
 
+      {/* Aire Claro */}
+      <section className="px-6 md:px-10 py-24 md:py-32 bg-[#f9f7f4]">
+        <div className="max-w-5xl mx-auto">
+          <div className="rounded-2xl overflow-hidden border border-[#e0ddd8]">
+            <img
+              src="/aire-claro-banner.png"
+              alt="Aire Claro — mapa de sensores ciudadanos y estaciones SIMA en Monterrey"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+
+          <div className="mt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-semibold text-[#0f172a] tracking-tight">
+                Aire Claro
+              </h2>
+              <p className="mt-3 text-base text-[#475569] leading-relaxed max-w-xl">
+                Un mapa en tiempo real que combina sensores ciudadanos Purple Air con las estaciones oficiales de la red SIMA en Monterrey.
+              </p>
+            </div>
+            <a
+              href="https://www.aireclaro.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-border inline-flex items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1 shrink-0"
+            >
+              Ver aireclaro.com
+            </a>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
