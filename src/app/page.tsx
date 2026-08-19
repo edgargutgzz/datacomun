@@ -50,44 +50,52 @@ export default function Home() {
       {/* Aire Claro */}
       <section className="px-6 md:px-10 py-24 md:py-32 bg-[#f9f7f4]">
         <div className="max-w-5xl mx-auto">
-          <div className="rounded-2xl overflow-hidden border border-[#e0ddd8]">
+          <div className="relative rounded-3xl overflow-hidden aspect-[4/3] md:aspect-[21/9]">
             <img
               src="/aire-claro-banner.png"
               alt="Aire Claro — mapa de sensores ciudadanos y estaciones SIMA en Monterrey"
-              className="w-full h-auto object-cover"
+              className="absolute inset-0 w-full h-full object-cover"
             />
-          </div>
-
-          <div className="mt-10 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-semibold text-[#0f172a] tracking-tight">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
+              <h2 className="text-4xl md:text-6xl font-semibold text-white tracking-tight">
                 Aire Claro
               </h2>
-              <p className="mt-3 text-base text-[#475569] leading-relaxed max-w-xl">
-                Las estaciones oficiales de SIMA son pocas y no reflejan lo que respira cada colonia. Diseñamos, construimos y operamos esta plataforma para el Observatorio Ciudadano de la Calidad del Aire (OCCAMM), combinando sensores ciudadanos con datos oficiales en un solo mapa en tiempo real, con recomendaciones de salud para población general, niños, adultos mayores, mujeres embarazadas y personas con condiciones cardiovasculares o respiratorias.
+              <p className="mt-2 text-base md:text-lg text-white/85">
+                Calidad del aire en tiempo real para Monterrey.
               </p>
-
-              <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-xl">
-                {[
-                  { value: "152", label: "sensores Purple Air" },
-                  { value: "16", label: "estaciones SIMA" },
-                  { value: "16,475", label: "visitantes" },
-                  { value: "41,201", label: "vistas" },
-                ].map((stat) => (
-                  <div key={stat.label}>
-                    <p className="text-xl font-semibold text-[#0f172a]">{stat.value}</p>
-                    <p className="text-xs text-[#888888] mt-0.5">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
+              <a
+                href="https://www.aireclaro.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 text-white text-sm font-medium border-b border-white/50 pb-0.5 w-fit hover:border-white transition-colors"
+              >
+                Ver aireclaro.com →
+              </a>
             </div>
+          </div>
+
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
+            {[
+              { value: "152", label: "sensores Purple Air" },
+              { value: "16", label: "estaciones SIMA" },
+              { value: "16,475", label: "visitantes" },
+              { value: "41,201", label: "vistas" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-2xl font-semibold text-[#0f172a]">{stat.value}</p>
+                <p className="text-xs text-[#888888] mt-0.5">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 pt-10 border-t border-[#e0ddd8]">
+            <p className="text-base text-[#475569]">¿Quieres algo así para tu organización?</p>
             <a
-              href="https://www.aireclaro.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-border inline-flex items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1 shrink-0"
+              href="mailto:edgar@datacomun.com"
+              className="cta-border mt-2 inline-flex items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1"
             >
-              Ver aireclaro.com
+              edgar@datacomun.com
             </a>
           </div>
         </div>
