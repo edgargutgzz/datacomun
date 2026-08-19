@@ -50,7 +50,7 @@ export default function Home() {
           <img
             src="/hero.jpg"
             alt="datacomun — taller de datos con la comunidad"
-            className="w-full h-full object-cover object-[10%_center]"
+            className="w-full h-full object-cover object-[25%_center]"
           />
           <p className="absolute bottom-3 right-3 text-[10px] text-black/40 tracking-wide">
             Fotografía: Equipo de documentación LABNL
