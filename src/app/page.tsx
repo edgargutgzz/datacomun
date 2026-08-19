@@ -58,14 +58,28 @@ export default function Home() {
             />
           </div>
 
-          <div className="mt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div className="mt-10 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
             <div>
               <h2 className="text-3xl md:text-5xl font-semibold text-[#0f172a] tracking-tight">
                 Aire Claro
               </h2>
               <p className="mt-3 text-base text-[#475569] leading-relaxed max-w-xl">
-                Un mapa en tiempo real que combina sensores ciudadanos Purple Air con las estaciones oficiales de la red SIMA en Monterrey.
+                Las estaciones oficiales de SIMA son pocas y no reflejan lo que respira cada colonia. Diseñamos, construimos y operamos esta plataforma para el Observatorio Ciudadano de la Calidad del Aire (OCCAMM), combinando sensores ciudadanos con datos oficiales en un solo mapa en tiempo real, con recomendaciones de salud para población general, niños, adultos mayores, mujeres embarazadas y personas con condiciones cardiovasculares o respiratorias.
               </p>
+
+              <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-xl">
+                {[
+                  { value: "152", label: "sensores Purple Air" },
+                  { value: "16", label: "estaciones SIMA" },
+                  { value: "16,475", label: "visitantes" },
+                  { value: "41,201", label: "vistas" },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <p className="text-xl font-semibold text-[#0f172a]">{stat.value}</p>
+                    <p className="text-xs text-[#888888] mt-0.5">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
             <a
               href="https://www.aireclaro.com/"
