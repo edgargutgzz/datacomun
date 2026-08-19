@@ -52,7 +52,8 @@ export default function Home() {
             alt="datacomun — taller de datos con la comunidad"
             className="w-full h-full object-cover object-[25%_center]"
           />
-          <p className="absolute bottom-3 right-3 text-[10px] text-black/40 tracking-wide">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/0 to-transparent" />
+          <p className="absolute bottom-3 right-3 text-[10px] text-white/70 tracking-wide">
             Fotografía: Equipo de documentación LABNL
           </p>
         </div>
