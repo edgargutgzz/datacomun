@@ -30,7 +30,7 @@ export default function Home() {
                 Datos para organizaciones que transforman su <span className="logo-comun">comunidad</span>
               </h1>
               <p className="mt-5 text-base md:text-lg text-[#475569] leading-relaxed text-balance">
-                Somos un estudio de visualización de datos que convierte información compleja en herramientas claras, visuales y accionables.
+                Diseño, construyo y opero mapas y plataformas de datos para organizaciones que trabajan temas públicos.
               </p>
             </div>
             <div className="mt-12 md:mt-16">
