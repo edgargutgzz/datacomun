@@ -49,8 +49,8 @@ export default function Home() {
       </div>
 
       {/* Aire Claro */}
-      <section className="px-6 md:px-10 py-24 md:py-32 bg-[#f9f7f4]">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="px-4 md:px-6 py-24 md:py-32 bg-[#f9f7f4]">
+        <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-5xl md:text-7xl font-semibold text-[#0f172a] tracking-tight">
             Aire Claro
           </h2>
@@ -67,7 +67,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Bento grid — map + coverage/reach cards */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
             {/* Map — large cell, spans 2 columns and both rows */}
@@ -79,10 +79,9 @@ export default function Home() {
               />
             </div>
 
-            {/* Coverage pictogram — dark card */}
-            <div className="rounded-3xl bg-[#0f172a] p-8 flex items-center justify-center">
+            {/* Coverage pictogram — light card */}
+            <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
               <DotPictogram
-                dark
                 stats={[
                   { value: "152", label: "Sensores Ciudadanos", dots: 38, color: "#06b6d4" },
                   { value: "16", label: "Estaciones SIMA", dots: 8, color: "#8b5cf6" },
@@ -110,12 +109,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Contact — full-width dark card */}
-          <div className="mt-4 md:mt-5 rounded-3xl bg-[#0f172a] px-8 py-12 md:py-16 text-center">
-            <p className="text-base text-white/70">Hablemos de tu proyecto.</p>
+          {/* Contact — full-width light card */}
+          <div className="mt-4 md:mt-5 rounded-3xl bg-white border border-[#e0ddd8] px-8 py-12 md:py-16 text-center">
+            <p className="text-base text-[#475569]">Hablemos de tu proyecto.</p>
             <a
               href="mailto:edgar@datacomun.com"
-              className="cta-border mt-2 inline-flex items-center gap-3 text-white font-medium text-lg border-b-2 pb-1"
+              className="cta-border mt-2 inline-flex items-center gap-3 text-[#0f172a] font-medium text-lg border-b-2 pb-1"
             >
               edgar@datacomun.com
             </a>
