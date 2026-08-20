@@ -84,13 +84,37 @@ export default function Home() {
             <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
               <div className="grid grid-cols-2 gap-8">
                 {[
-                  { value: "152", label: "Sensores Ciudadanos", ringed: false },
-                  { value: "16", label: "Estaciones SIMA", ringed: true },
+                  { value: "152", label: "Sensores Ciudadanos", icon: "users" as const },
+                  { value: "16", label: "Estaciones SIMA", icon: "landmark" as const },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
-                    <span
-                      className={`inline-block w-3 h-3 rounded-full bg-[#0f172a] mb-2 ${stat.ringed ? "ring-2 ring-offset-2 ring-[#0f172a]" : ""}`}
-                    />
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6 mx-auto mb-2 text-[#0f172a]"
+                    >
+                      {stat.icon === "users" ? (
+                        <>
+                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                          <circle cx="9" cy="7" r="4" />
+                          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </>
+                      ) : (
+                        <>
+                          <line x1="3" y1="22" x2="21" y2="22" />
+                          <line x1="6" y1="18" x2="6" y2="11" />
+                          <line x1="10" y1="18" x2="10" y2="11" />
+                          <line x1="14" y1="18" x2="14" y2="11" />
+                          <line x1="18" y1="18" x2="18" y2="11" />
+                          <polygon points="12 2 21 8 3 8" />
+                        </>
+                      )}
+                    </svg>
                     <p className="text-2xl font-semibold text-[#0f172a] tracking-tight">
                       {stat.value}
                     </p>
