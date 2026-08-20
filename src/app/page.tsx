@@ -4,7 +4,7 @@ import DotPictogram from "@/components/DotPictogram";
 
 export default function Home() {
   return (
-    <div className="px-4 md:px-8">
+    <div className="px-4 md:px-8 pt-4 md:pt-8">
 
       {/* Hero — split screen */}
       <div className="min-h-screen grid md:grid-cols-[1.2fr_0.8fr]">
