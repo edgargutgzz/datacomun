@@ -56,7 +56,7 @@ export default function Home() {
               Aire Claro
             </h2>
             <p className="text-sm text-[#475569]">
-              Datos para mejorar la calidad del aire en Nuevo León.
+              Un mapa de la calidad del aire en Nuevo León.
             </p>
           </div>
           <a
