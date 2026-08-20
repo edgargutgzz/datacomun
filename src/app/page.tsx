@@ -101,20 +101,13 @@ export default function Home() {
 
             {/* Reach — light card */}
             <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
-              <div className="grid grid-cols-2 gap-8">
-                {[
-                  { value: "16,475", label: "Visitantes" },
-                  { value: "41,201", label: "Vistas" },
-                ].map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <p className="text-2xl font-semibold text-[#0f172a] tracking-tight">
-                      {stat.value}
-                    </p>
-                    <p className="mt-1 text-xs uppercase tracking-widest text-[#888888]">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
+              <div className="text-center">
+                <p className="text-2xl font-semibold text-[#0f172a] tracking-tight">
+                  8,000+
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-widest text-[#888888]">
+                  Visitantes al año
+                </p>
               </div>
             </div>
           </div>
