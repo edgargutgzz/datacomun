@@ -111,25 +111,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Mobile — phone mockup + highlight */}
-          <div className="mt-4 md:mt-5 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-            <div className="rounded-3xl overflow-hidden bg-[#e9e6e1] flex items-center justify-center py-10">
-              <img
-                src="/aire-claro-mobile.png"
-                alt="Aire Claro en el celular — mapa de calidad del aire en Monterrey"
-                className="h-[420px] w-auto"
-              />
-            </div>
-            <div className="md:col-span-2 rounded-3xl bg-white border border-[#e0ddd8] p-8 md:p-12 flex flex-col justify-center">
-              <h3 className="text-2xl md:text-3xl font-semibold text-[#0f172a] tracking-tight">
-                También en tu bolsillo.
-              </h3>
-              <p className="mt-3 text-base text-[#475569] leading-relaxed max-w-md">
-                Consulta la calidad del aire de tu colonia desde el celular, con recomendaciones de salud para cada grupo de población.
-              </p>
-            </div>
-          </div>
-
           {/* Contact — full-width light card */}
           <div className="mt-4 md:mt-5 rounded-3xl bg-white border border-[#e0ddd8] px-8 py-12 md:py-16 text-center">
             <p className="text-base text-[#475569]">Hablemos de tu proyecto.</p>
