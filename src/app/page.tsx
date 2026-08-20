@@ -4,7 +4,7 @@ import DotPictogram from "@/components/DotPictogram";
 
 export default function Home() {
   return (
-    <div>
+    <div className="px-3 md:px-4">
 
       {/* Hero — split screen */}
       <div className="min-h-screen grid md:grid-cols-[1.2fr_0.8fr]">
@@ -49,7 +49,7 @@ export default function Home() {
       </div>
 
       {/* Aire Claro */}
-      <section className="px-4 md:px-6 py-24 md:py-32 bg-[#f9f7f4]">
+      <section className="py-24 md:py-32 bg-[#f9f7f4]">
         <div className="max-w-7xl mx-auto flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-6">
           <div className="flex items-baseline gap-3">
             <h2 className="text-2xl font-semibold text-[#0f172a] tracking-tight">
