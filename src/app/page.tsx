@@ -19,12 +19,12 @@ export default function Home() {
 
 
           {/* Nav */}
-          <header className="relative z-10 flex items-center justify-between px-6 md:px-10 py-7">
+          <header className="relative z-10 flex items-center justify-between px-2 md:px-10 py-7">
             <Logo size="text-xl" />
           </header>
 
           {/* Copy */}
-          <div className="relative z-10 flex flex-col justify-end flex-1 px-6 md:px-10 pt-4 pb-12 md:pt-0 md:pb-16">
+          <div className="relative z-10 flex flex-col justify-end flex-1 px-2 md:px-10 pt-4 pb-12 md:pt-0 md:pb-16">
             <div className="w-fit">
               <h1 className="text-5xl sm:text-5xl md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
                 Mapas para organizaciones que transforman su <span className="logo-comun">comunidad</span>
@@ -106,7 +106,7 @@ export default function Home() {
             <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
               <div className="text-center">
                 <p className="text-2xl font-semibold text-[#0f172a] tracking-tight">
-                  8,000+
+                  8,000
                 </p>
                 <p className="mt-1 text-xs uppercase tracking-widest text-[#888888]">
                   Visitantes al año
