@@ -80,8 +80,27 @@ export default function Home() {
               />
             </div>
 
+            {/* Coverage — light card */}
+            <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
+              <div className="grid grid-cols-2 gap-8">
+                {[
+                  { value: "152", label: "Sensores Ciudadanos" },
+                  { value: "16", label: "Estaciones SIMA" },
+                ].map((stat) => (
+                  <div key={stat.label} className="text-center">
+                    <p className="text-2xl font-semibold text-[#0f172a] tracking-tight">
+                      {stat.value}
+                    </p>
+                    <p className="mt-1 text-xs uppercase tracking-widest text-[#888888]">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Reach — light card */}
-            <div className="md:row-span-2 rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
+            <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
               <div className="grid grid-cols-2 gap-8">
                 {[
                   { value: "16,475", label: "Visitantes" },
