@@ -68,54 +68,58 @@ export default function Home() {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="mt-16 rounded-3xl overflow-hidden">
-            <img
-              src="/aire-claro-banner.png"
-              alt="Aire Claro — mapa de sensores ciudadanos y estaciones SIMA en Monterrey"
-              className="w-full h-auto object-cover"
-            />
-          </div>
+          {/* Bento grid — map + coverage/reach cards */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+            {/* Map — large cell, spans 2 columns and both rows */}
+            <div className="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden">
+              <img
+                src="/aire-claro-banner.png"
+                alt="Aire Claro — mapa de sensores ciudadanos y estaciones SIMA en Monterrey"
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-          {/* Coverage pictogram — sensores vs estaciones, drawn to the same scale */}
-          <div className="mt-24">
-            <DotPictogram
-              stats={[
-                { value: "152", label: "Sensores Ciudadanos", dots: 76, color: "#06b6d4" },
-                { value: "16", label: "Estaciones SIMA", dots: 8, color: "#8b5cf6" },
-              ]}
-            />
-          </div>
+            {/* Coverage pictogram — dark card */}
+            <div className="rounded-3xl bg-[#0f172a] p-8 flex items-center justify-center">
+              <DotPictogram
+                dark
+                stats={[
+                  { value: "152", label: "Sensores Ciudadanos", dots: 38, color: "#06b6d4" },
+                  { value: "16", label: "Estaciones SIMA", dots: 8, color: "#8b5cf6" },
+                ]}
+              />
+            </div>
 
-          {/* Reach */}
-          <div className="mt-16 grid grid-cols-2 divide-x divide-[#e0ddd8] max-w-xs mx-auto">
-            {[
-              { value: "16,475", label: "Visitantes" },
-              { value: "41,201", label: "Vistas" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center px-6">
-                <p className="text-3xl md:text-4xl font-semibold text-[#0f172a] tracking-tight">
-                  {stat.value}
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-widest text-[#888888]">
-                  {stat.label}
-                </p>
+            {/* Reach — light card */}
+            <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
+              <div className="grid grid-cols-2 gap-8">
+                {[
+                  { value: "16,475", label: "Visitantes" },
+                  { value: "41,201", label: "Vistas" },
+                ].map((stat) => (
+                  <div key={stat.label} className="text-center">
+                    <p className="text-2xl font-semibold text-[#0f172a] tracking-tight">
+                      {stat.value}
+                    </p>
+                    <p className="mt-1 text-xs uppercase tracking-widest text-[#888888]">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section className="px-6 md:px-10 pb-24 md:pb-32 bg-[#f9f7f4]">
-        <div className="max-w-5xl mx-auto pt-10 border-t border-[#e0ddd8]">
-          <p className="text-base text-[#475569]">Hablemos de tu proyecto.</p>
-          <a
-            href="mailto:edgar@datacomun.com"
-            className="cta-border mt-2 inline-flex items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1"
-          >
-            edgar@datacomun.com
-          </a>
+          {/* Contact — full-width dark card */}
+          <div className="mt-4 md:mt-5 rounded-3xl bg-[#0f172a] px-8 py-12 md:py-16 text-center">
+            <p className="text-base text-white/70">Hablemos de tu proyecto.</p>
+            <a
+              href="mailto:edgar@datacomun.com"
+              className="cta-border mt-2 inline-flex items-center gap-3 text-white font-medium text-lg border-b-2 pb-1"
+            >
+              edgar@datacomun.com
+            </a>
+          </div>
         </div>
       </section>
 
