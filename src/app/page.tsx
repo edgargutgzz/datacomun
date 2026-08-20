@@ -50,7 +50,7 @@ export default function Home() {
 
       {/* Aire Claro */}
       <section className="py-24 md:py-32 bg-[#f9f7f4]">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-6">
+        <div className="w-full flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-6">
           <div className="flex items-baseline gap-3">
             <h2 className="text-2xl font-semibold text-[#0f172a] tracking-tight">
               Aire Claro
@@ -69,7 +69,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="max-w-7xl mx-auto">
+        <div className="w-full">
           {/* Bento grid — map + coverage/reach cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
             {/* Map — large cell, spans 2 columns and both rows */}
