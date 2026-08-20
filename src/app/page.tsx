@@ -50,18 +50,20 @@ export default function Home() {
 
       {/* Aire Claro */}
       <section className="px-4 md:px-6 py-24 md:py-32 bg-[#f9f7f4]">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-semibold text-[#0f172a] tracking-tight">
-            Aire Claro
-          </h2>
-          <p className="mt-4 text-lg md:text-xl text-[#475569]">
-            Datos para mejorar la calidad del aire en Nuevo León.
-          </p>
+        <div className="max-w-7xl mx-auto flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-6">
+          <div className="flex items-baseline gap-3">
+            <h2 className="text-2xl font-semibold text-[#0f172a] tracking-tight">
+              Aire Claro
+            </h2>
+            <p className="text-sm text-[#475569]">
+              Datos para mejorar la calidad del aire en Nuevo León.
+            </p>
+          </div>
           <a
             href="https://www.aireclaro.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center gap-2 text-[#0f172a] text-sm font-medium border-b border-[#0f172a]/40 pb-0.5 hover:border-[#0f172a] transition-colors"
+            className="inline-flex items-center gap-2 text-[#0f172a] text-sm font-medium border-b border-[#0f172a]/40 pb-0.5 hover:border-[#0f172a] transition-colors"
           >
             Ver aireclaro.com →
           </a>
@@ -69,7 +71,7 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto">
           {/* Bento grid — map + coverage/reach cards */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
             {/* Map — large cell, spans 2 columns and both rows */}
             <div className="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden">
               <img
