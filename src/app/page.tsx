@@ -11,7 +11,7 @@ export default function Home() {
 
         {/* Left column — nav + copy */}
         <div
-          className="relative flex flex-col overflow-hidden rounded-3xl md:min-h-screen"
+          className="relative flex flex-col overflow-hidden rounded-t-3xl md:rounded-t-none md:rounded-l-3xl md:min-h-screen"
           style={{
             background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
           }}
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
 
         {/* Right column — image */}
-        <div className="relative overflow-hidden rounded-3xl min-h-[50vh] md:min-h-screen">
+        <div className="relative overflow-hidden rounded-b-3xl md:rounded-b-none md:rounded-r-3xl min-h-[50vh] md:min-h-screen">
           <img
             src="/hero.jpg"
             alt="datacomun — taller de datos con la comunidad"
