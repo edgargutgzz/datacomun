@@ -115,8 +115,17 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Contact — full-width light card */}
-          <div className="mt-4 md:mt-5 rounded-3xl bg-white border border-[#e0ddd8] px-8 py-12 md:py-16 text-center">
+        </div>
+
+        {/* Contact — same treatment as hero banner */}
+        <div
+          className="relative overflow-hidden rounded-3xl mt-20 md:mt-32 px-8 py-16 md:py-24 text-center"
+          style={{
+            background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
+          }}
+        >
+          <GrainOverlay />
+          <div className="relative z-10">
             <p className="text-base text-[#475569]">Hablemos de tu proyecto.</p>
             <a
               href="mailto:edgar@datacomun.com"
