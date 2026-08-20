@@ -1,6 +1,5 @@
 import Logo from "@/components/Logo";
 import GrainOverlay from "@/components/GrainOverlay";
-import DotPictogram from "@/components/DotPictogram";
 
 export default function Home() {
   return (
@@ -81,18 +80,8 @@ export default function Home() {
               />
             </div>
 
-            {/* Coverage pictogram — light card */}
-            <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
-              <DotPictogram
-                stats={[
-                  { value: "152", label: "Sensores Ciudadanos", dots: 38, color: "#06b6d4" },
-                  { value: "16", label: "Estaciones SIMA", dots: 8, color: "#8b5cf6" },
-                ]}
-              />
-            </div>
-
             {/* Reach — light card */}
-            <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
+            <div className="md:row-span-2 rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
               <div className="grid grid-cols-2 gap-8">
                 {[
                   { value: "16,475", label: "Visitantes" },
