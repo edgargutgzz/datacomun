@@ -84,10 +84,13 @@ export default function Home() {
             <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
               <div className="grid grid-cols-2 gap-8">
                 {[
-                  { value: "152", label: "Sensores Ciudadanos" },
-                  { value: "16", label: "Estaciones SIMA" },
+                  { value: "152", label: "Sensores Ciudadanos", ringed: false },
+                  { value: "16", label: "Estaciones SIMA", ringed: true },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
+                    <span
+                      className={`inline-block w-3 h-3 rounded-full bg-[#0f172a] mb-2 ${stat.ringed ? "ring-2 ring-offset-2 ring-[#0f172a]" : ""}`}
+                    />
                     <p className="text-2xl font-semibold text-[#0f172a] tracking-tight">
                       {stat.value}
                     </p>
