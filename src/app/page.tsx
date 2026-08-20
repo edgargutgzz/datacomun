@@ -11,7 +11,7 @@ export default function Home() {
 
         {/* Left column — nav + copy */}
         <div
-          className="relative flex flex-col overflow-hidden md:min-h-screen"
+          className="relative flex flex-col overflow-hidden rounded-3xl md:min-h-screen"
           style={{
             background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
           }}
