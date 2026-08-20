@@ -35,7 +35,7 @@ export default function Home() {
         </div>
 
         {/* Right column — image */}
-        <div className="relative overflow-hidden min-h-[50vh] md:min-h-screen">
+        <div className="relative overflow-hidden rounded-3xl min-h-[50vh] md:min-h-screen">
           <img
             src="/hero.jpg"
             alt="datacomun — taller de datos con la comunidad"
