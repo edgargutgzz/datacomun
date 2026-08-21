@@ -26,7 +26,7 @@ export default function Home() {
           {/* Copy */}
           <div className="relative z-10 flex flex-col justify-end flex-1 px-4 md:px-10 pt-10 pb-12 md:pt-0 md:pb-16">
             <div className="w-fit">
-              <h1 className="text-4xl sm:text-4xl md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
+              <h1 className="text-[2.5rem] sm:text-[2.5rem] md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
                 Mapas para organizaciones que transforman su <span className="logo-comun">comunidad</span>
               </h1>
             </div>
