@@ -48,13 +48,20 @@ export default function Home() {
       </div>
 
       {/* Aire Claro */}
-      <section className="py-24 md:py-32 bg-[#f9f7f4]">
-        <div className="w-full px-3 md:px-4 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-6">
-          <div className="min-w-0 flex flex-wrap items-baseline gap-3">
-            <h2 className="text-2xl font-semibold text-[#0f172a] tracking-tight">
-              Aire Claro
+      <section
+        className="relative overflow-hidden rounded-3xl mt-4 md:mt-5 py-16 md:py-24 px-4 md:px-8"
+        style={{
+          background: "radial-gradient(ellipse at 80% 0%, rgba(6,182,212,0.12) 0%, transparent 50%), radial-gradient(ellipse at 10% 100%, rgba(139,92,246,0.10) 0%, transparent 50%), #f9f7f4",
+        }}
+      >
+        <GrainOverlay />
+
+        <div className="relative z-10 w-full flex flex-wrap items-end justify-between gap-x-6 gap-y-3 mb-10">
+          <div className="min-w-0">
+            <h2 className="text-4xl md:text-6xl font-semibold text-[#0f172a] tracking-tight">
+              Aire <span className="logo-comun">Claro</span>
             </h2>
-            <p className="text-sm text-[#475569]">
+            <p className="mt-2 text-base text-[#475569]">
               Un mapa de la calidad del aire en Nuevo León.
             </p>
           </div>
@@ -62,13 +69,13 @@ export default function Home() {
             href="https://www.aireclaro.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="min-w-0 inline-flex items-center gap-2 text-[#0f172a] text-sm font-medium border-b border-[#0f172a]/40 pb-0.5 hover:border-[#0f172a] transition-colors"
+            className="cta-border min-w-0 inline-flex items-center gap-2 text-[#0f172a] text-sm font-medium border-b-2 pb-0.5"
           >
             Ver aireclaro.com →
           </a>
         </div>
 
-        <div className="w-full">
+        <div className="relative z-10 w-full">
           {/* Bento grid — map + coverage/reach cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
             {/* Map — large cell, spans 2 columns and both rows */}
@@ -132,23 +139,15 @@ export default function Home() {
 
         </div>
 
-        {/* Contact — same treatment as hero banner */}
-        <div
-          className="relative overflow-hidden rounded-3xl mt-20 md:mt-32 px-8 py-16 md:py-24 text-center"
-          style={{
-            background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
-          }}
-        >
-          <GrainOverlay />
-          <div className="relative z-10">
-            <p className="text-base text-[#475569]">Hablemos de tu proyecto.</p>
-            <a
-              href="mailto:edgar@datacomun.com"
-              className="cta-border mt-2 inline-flex items-center gap-3 text-[#0f172a] font-medium text-lg border-b-2 pb-1"
-            >
-              edgar@datacomun.com
-            </a>
-          </div>
+        {/* Contact — dark closing card */}
+        <div className="relative z-10 rounded-3xl bg-[#0f172a] mt-20 md:mt-32 px-8 py-16 md:py-24 text-center">
+          <p className="text-base text-white/60">Hablemos de tu proyecto.</p>
+          <a
+            href="mailto:edgar@datacomun.com"
+            className="mt-2 inline-flex items-center gap-3 text-white font-medium text-lg border-b-2 border-white/40 hover:border-white pb-1 transition-colors"
+          >
+            edgar@datacomun.com
+          </a>
         </div>
       </section>
 
