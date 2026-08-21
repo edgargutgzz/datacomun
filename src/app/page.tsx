@@ -48,7 +48,7 @@ export default function Home() {
       </div>
 
       {/* Aire Claro */}
-      <section className="py-24 md:py-32 bg-[#f9f7f4]">
+      <section className="py-14 md:py-32 bg-[#f9f7f4]">
         <div className="w-full px-3 md:px-4 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-6">
           <div className="min-w-0 flex flex-wrap items-baseline gap-3">
             <h2 className="text-2xl font-semibold text-[#0f172a] tracking-tight">
@@ -80,7 +80,7 @@ export default function Home() {
 
         {/* Contact — same treatment as hero banner */}
         <div
-          className="relative overflow-hidden rounded-3xl mt-20 md:mt-32 px-8 py-16 md:py-24 text-center"
+          className="relative overflow-hidden rounded-3xl mt-10 md:mt-32 px-8 py-12 md:py-24 text-center"
           style={{
             background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
           }}
