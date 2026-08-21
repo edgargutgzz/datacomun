@@ -69,7 +69,7 @@ export default function Home() {
         </div>
 
         <div className="w-full">
-          <div className="rounded-3xl overflow-hidden">
+          <div className="rounded-3xl overflow-hidden h-[380px] md:h-[460px]">
             <img
               src="/aire-claro-banner.png"
               alt="Aire Claro — mapa de sensores ciudadanos y estaciones SIMA en Monterrey"
