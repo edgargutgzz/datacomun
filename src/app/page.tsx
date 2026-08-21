@@ -69,67 +69,13 @@ export default function Home() {
         </div>
 
         <div className="w-full">
-          {/* Bento grid — map + coverage/reach cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-            {/* Map — large cell, spans 2 columns and both rows */}
-            <div className="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden">
-              <img
-                src="/aire-claro-banner.png"
-                alt="Aire Claro — mapa de sensores ciudadanos y estaciones SIMA en Monterrey"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Coverage — light card */}
-            <div className="md:row-span-2 rounded-3xl bg-white border border-[#e0ddd8] p-8 flex flex-col items-center justify-center">
-              <p className="text-sm text-[#475569] text-center mb-6">
-                Dos redes de datos, distintas metodologías, un solo mapa.
-              </p>
-              <div className="grid grid-cols-2 gap-8">
-                {[
-                  { value: "152", label: "Sensores Ciudadanos", icon: "users" as const },
-                  { value: "16", label: "Estaciones SIMA", icon: "landmark" as const },
-                ].map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-6 h-6 mx-auto mb-2 text-[#0f172a]"
-                    >
-                      {stat.icon === "users" ? (
-                        <>
-                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                          <circle cx="9" cy="7" r="4" />
-                          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                        </>
-                      ) : (
-                        <>
-                          <line x1="3" y1="22" x2="21" y2="22" />
-                          <line x1="6" y1="18" x2="6" y2="11" />
-                          <line x1="10" y1="18" x2="10" y2="11" />
-                          <line x1="14" y1="18" x2="14" y2="11" />
-                          <line x1="18" y1="18" x2="18" y2="11" />
-                          <polygon points="12 2 21 8 3 8" />
-                        </>
-                      )}
-                    </svg>
-                    <p className="text-2xl font-semibold text-[#0f172a] tracking-tight">
-                      {stat.value}
-                    </p>
-                    <p className="mt-1 text-xs uppercase tracking-widest text-[#888888]">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="rounded-3xl overflow-hidden">
+            <img
+              src="/aire-claro-banner.png"
+              alt="Aire Claro — mapa de sensores ciudadanos y estaciones SIMA en Monterrey"
+              className="w-full h-full object-cover"
+            />
           </div>
-
         </div>
 
         {/* Contact — same treatment as hero banner */}
