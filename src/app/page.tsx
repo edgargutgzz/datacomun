@@ -55,7 +55,7 @@ export default function Home() {
               Aire Claro
             </h2>
             <p className="text-sm text-[#475569]">
-              Reúne los sensores ciudadanos y las estaciones oficiales del SIMA en un solo mapa.
+              Un mapa que visualiza la calidad del aire en la Zona Metropolitana de Monterrey.
             </p>
           </div>
           <a
