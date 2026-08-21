@@ -62,7 +62,7 @@ export default function Home() {
               Aire <span className="logo-comun">Claro</span>
             </h2>
             <p className="mt-2 text-base text-[#475569]">
-              Un mapa de la calidad del aire en Nuevo León.
+              Reúne los sensores ciudadanos y las estaciones oficiales del SIMA en un solo mapa.
             </p>
           </div>
           <a
