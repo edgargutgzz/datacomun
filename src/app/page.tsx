@@ -81,7 +81,7 @@ export default function Home() {
             </div>
 
             {/* Coverage — light card */}
-            <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex flex-col items-center justify-center">
+            <div className="md:row-span-2 rounded-3xl bg-white border border-[#e0ddd8] p-8 flex flex-col items-center justify-center">
               <p className="text-sm text-[#475569] text-center mb-6">
                 Dos redes de datos, distintas metodologías, un solo mapa.
               </p>
@@ -126,18 +126,6 @@ export default function Home() {
                     </p>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            {/* Reach — light card */}
-            <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
-              <div className="text-center">
-                <p className="text-2xl font-semibold text-[#0f172a] tracking-tight">
-                  8,000
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-widest text-[#888888]">
-                  Visitantes al año
-                </p>
               </div>
             </div>
           </div>
