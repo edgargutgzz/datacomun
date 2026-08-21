@@ -54,7 +54,7 @@ export default function Home() {
             <h2 className="text-2xl font-semibold text-[#0f172a] tracking-tight">
               Aire Claro
             </h2>
-            <p className="text-base md:text-sm text-[#475569]">
+            <p className="text-base text-[#475569]">
               Un mapa que visualiza la calidad del aire en la Zona Metropolitana de Monterrey.
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function Home() {
             href="https://www.aireclaro.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="min-w-0 inline-flex items-center gap-2 text-[#0f172a] text-base md:text-sm font-medium border-b border-[#0f172a]/40 pb-0.5 hover:border-[#0f172a] transition-colors"
+            className="min-w-0 inline-flex items-center gap-2 text-[#0f172a] text-base font-medium border-b border-[#0f172a]/40 pb-0.5 hover:border-[#0f172a] transition-colors"
           >
             Ver aireclaro.com →
           </a>
