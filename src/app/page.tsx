@@ -73,7 +73,7 @@ export default function Home() {
             <img
               src="/aire-claro-banner.png"
               alt="Aire Claro — mapa de sensores ciudadanos y estaciones SIMA en Monterrey"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
         </div>
