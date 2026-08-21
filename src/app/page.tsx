@@ -87,7 +87,7 @@ export default function Home() {
         >
           <GrainOverlay />
           <div className="relative z-10">
-            <p className="text-base text-[#475569]">Hablemos de tu proyecto.</p>
+            <p className="text-base text-[#475569]">Hablemos de tu proyecto</p>
             <a
               href="mailto:edgar@datacomun.com"
               className="cta-border mt-2 inline-flex items-center gap-3 text-[#0f172a] font-medium text-lg border-b-2 pb-1"
