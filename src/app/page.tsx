@@ -81,7 +81,10 @@ export default function Home() {
             </div>
 
             {/* Coverage — light card */}
-            <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex items-center justify-center">
+            <div className="rounded-3xl bg-white border border-[#e0ddd8] p-8 flex flex-col items-center justify-center">
+              <p className="text-sm text-[#475569] text-center mb-6">
+                Dos redes de datos, distintas metodologías, un solo mapa.
+              </p>
               <div className="grid grid-cols-2 gap-8">
                 {[
                   { value: "152", label: "Sensores Ciudadanos", icon: "users" as const },
