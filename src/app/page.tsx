@@ -80,7 +80,7 @@ export default function Home() {
 
         {/* Contact — same treatment as hero banner */}
         <div
-          className="relative overflow-hidden rounded-3xl mt-10 md:mt-32 px-8 py-12 md:py-24 text-center"
+          className="relative overflow-hidden rounded-3xl mt-14 md:mt-32 px-8 py-12 md:py-24 text-center"
           style={{
             background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
           }}
