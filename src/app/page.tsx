@@ -47,7 +47,7 @@ export default function Home() {
 
       </div>
 
-      {/* Aire Claro */}
+      {/* Observatorio del Aire */}
       <section className="pt-14 pb-14 md:pt-32 md:pb-20 bg-[#f9f7f4]">
         <div className="w-full px-3 md:px-4 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-6">
           <div className="min-w-0 flex flex-wrap items-center gap-3">
@@ -63,12 +63,12 @@ export default function Home() {
             </p>
           </div>
           <a
-            href="https://www.aireclaro.com/"
+            href="https://www.observatoriodelaire.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="min-w-0 inline-flex items-center gap-2 text-[#0f172a] text-base font-medium border-b border-[#0f172a]/40 pb-0.5 hover:border-[#0f172a] transition-colors"
           >
-            Ver aireclaro.com →
+            Ver observatoriodelaire.com →
           </a>
         </div>
 
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="rounded-3xl overflow-hidden h-[380px] md:h-[460px]">
             <img
               src="/aire-claro-banner.png"
-              alt="Aire Claro — mapa de sensores ciudadanos y estaciones SIMA en Monterrey"
+              alt="Observatorio del Aire — mapa de sensores ciudadanos y estaciones SIMA en Monterrey"
               className="w-full h-full object-cover object-top"
             />
           </div>
