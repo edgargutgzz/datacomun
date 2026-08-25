@@ -29,16 +29,16 @@ export default function Home() {
               <h1 className="text-[2.6rem] sm:text-[2.6rem] md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
                 Mapas para organizaciones que transforman su <span className="logo-comun">comunidad</span>
               </h1>
-              <p className="mt-5 md:mt-8 text-base text-[#475569]">
-                Hablemos de tu proyecto{" "}
-                <a
-                  href="mailto:edgar@datacomun.com"
-                  className="cta-border text-[#0f172a] font-medium border-b-2 pb-0.5"
-                >
-                  edgar@datacomun.com
-                </a>
-              </p>
             </div>
+            <p className="mt-5 md:mt-8 text-base text-[#475569] whitespace-nowrap">
+              Hablemos de tu proyecto{" "}
+              <a
+                href="mailto:edgar@datacomun.com"
+                className="cta-border text-[#0f172a] font-medium border-b-2 pb-0.5"
+              >
+                edgar@datacomun.com
+              </a>
+            </p>
           </div>
         </div>
 
