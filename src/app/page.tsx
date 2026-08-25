@@ -75,7 +75,7 @@ export default function Home() {
         <div className="w-full">
           <div className="rounded-3xl overflow-hidden h-[380px] md:h-[460px]">
             <img
-              src="/aire-claro-banner.png"
+              src="/observatorio-del-aire-banner.png"
               alt="Observatorio del Aire — mapa de sensores ciudadanos y estaciones SIMA en Monterrey"
               className="w-full h-full object-cover object-top"
             />
