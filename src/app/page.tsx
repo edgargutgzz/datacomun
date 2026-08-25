@@ -30,7 +30,7 @@ export default function Home() {
                 Mapas para organizaciones que transforman su <span className="logo-comun">comunidad</span>
               </h1>
             </div>
-            <p className="mt-7 md:mt-11 text-base text-[#475569]">Hablemos de tu proyecto</p>
+            <p className="mt-10 md:mt-16 text-base text-[#475569]">Hablemos de tu proyecto</p>
             <a
               href="mailto:edgar@datacomun.com"
               className="cta-border mt-2 inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-lg border-b-2 pb-1"
