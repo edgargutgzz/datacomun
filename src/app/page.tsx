@@ -6,11 +6,11 @@ export default function Home() {
     <div className="px-4 md:px-6 py-3 md:py-5">
 
       {/* Hero — split screen */}
-      <div className="min-h-[calc(100vh-1.5rem)] md:min-h-[calc(100vh-2.5rem)] grid md:grid-cols-[1.2fr_0.8fr]">
+      <div className="min-h-[calc(100vh-1.5rem+4.5rem)] md:min-h-[calc(100vh-2.5rem+5.5rem)] grid md:grid-cols-[1.2fr_0.8fr]">
 
         {/* Left column — nav + copy */}
         <div
-          className="relative flex flex-col overflow-hidden rounded-t-3xl md:rounded-tr-none md:rounded-bl-3xl md:min-h-[calc(100vh-2.5rem)]"
+          className="relative flex flex-col overflow-hidden rounded-t-3xl md:rounded-tr-none md:rounded-bl-3xl md:min-h-[calc(100vh-2.5rem+5.5rem)]"
           style={{
             background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
           }}
@@ -30,7 +30,11 @@ export default function Home() {
                 Mapas para organizaciones que transforman su <span className="logo-comun">comunidad</span>
               </h1>
             </div>
-            <p className="mt-8 md:mt-14 text-base text-[#475569]">Hablemos de tu proyecto</p>
+          </div>
+
+          {/* Contact — pinned near the bottom edge, independent of the copy above */}
+          <div className="relative z-10 px-4 md:px-10 pb-10 md:pb-14">
+            <p className="text-base text-[#475569]">Hablemos de tu proyecto</p>
             <a
               href="mailto:edgar@datacomun.com"
               className="cta-border mt-2 inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-lg border-b-2 pb-1"
@@ -41,7 +45,7 @@ export default function Home() {
         </div>
 
         {/* Right column — image */}
-        <div className="relative overflow-hidden rounded-b-3xl md:rounded-bl-none md:rounded-tr-3xl min-h-[50vh] md:min-h-[calc(100vh-2.5rem)]">
+        <div className="relative overflow-hidden rounded-b-3xl md:rounded-bl-none md:rounded-tr-3xl min-h-[50vh] md:min-h-[calc(100vh-2.5rem+5.5rem)]">
           <img
             src="/hero.jpg"
             alt="datacomun — taller de datos con la comunidad"
