@@ -53,8 +53,8 @@ export default function Home() {
           <div className="min-w-0 flex flex-wrap items-center gap-3">
             <h2>
               <img
-                src="/aire-claro-logo.png"
-                alt="Aire Claro"
+                src="/observatorio-del-aire-logo.png"
+                alt="Observatorio del Aire"
                 className="h-6 md:h-7 w-auto"
               />
             </h2>
