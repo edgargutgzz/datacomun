@@ -3,14 +3,14 @@ import GrainOverlay from "@/components/GrainOverlay";
 
 export default function Home() {
   return (
-    <div className="px-4 md:px-6 pt-3 md:pt-5">
+    <div className="px-4 md:px-6 py-3 md:py-5">
 
       {/* Hero — split screen */}
-      <div className="min-h-screen grid md:grid-cols-[1.2fr_0.8fr]">
+      <div className="min-h-[calc(100vh-1.5rem)] md:min-h-[calc(100vh-2.5rem)] grid md:grid-cols-[1.2fr_0.8fr]">
 
         {/* Left column — nav + copy */}
         <div
-          className="relative flex flex-col overflow-hidden rounded-t-3xl md:rounded-tr-none md:rounded-bl-3xl md:min-h-screen"
+          className="relative flex flex-col overflow-hidden rounded-t-3xl md:rounded-tr-none md:rounded-bl-3xl md:min-h-[calc(100vh-2.5rem)]"
           style={{
             background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
           }}
@@ -29,12 +29,21 @@ export default function Home() {
               <h1 className="text-[2.6rem] sm:text-[2.6rem] md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
                 Mapas para organizaciones que transforman su <span className="logo-comun">comunidad</span>
               </h1>
+              <p className="mt-5 md:mt-8 text-base text-[#475569]">
+                Hablemos de tu proyecto{" "}
+                <a
+                  href="mailto:edgar@datacomun.com"
+                  className="cta-border text-[#0f172a] font-medium border-b-2 pb-0.5"
+                >
+                  edgar@datacomun.com
+                </a>
+              </p>
             </div>
           </div>
         </div>
 
         {/* Right column — image */}
-        <div className="relative overflow-hidden rounded-b-3xl md:rounded-bl-none md:rounded-tr-3xl min-h-[50vh] md:min-h-screen">
+        <div className="relative overflow-hidden rounded-b-3xl md:rounded-bl-none md:rounded-tr-3xl min-h-[50vh] md:min-h-[calc(100vh-2.5rem)]">
           <img
             src="/hero.jpg"
             alt="datacomun — taller de datos con la comunidad"
