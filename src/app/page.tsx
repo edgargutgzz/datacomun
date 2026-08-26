@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <a
               href="mailto:edgar@datacomun.com"
-              className="cta-border mt-8 md:mt-16 inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-lg md:text-base border-b-2 pb-1"
+              className="cta-border mt-8 md:mt-16 inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1"
             >
               edgar@datacomun.com
             </a>
@@ -46,9 +46,6 @@ export default function Home() {
             alt="datacomun — taller de datos con la comunidad"
             className="w-full h-full object-cover object-[45%_center]"
           />
-          <p className="absolute bottom-3 right-5 text-[10px] text-black/40 tracking-wide">
-            Fotografía: Equipo de documentación LABNL
-          </p>
         </div>
 
       </div>
