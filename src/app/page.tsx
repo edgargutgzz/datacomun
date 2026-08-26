@@ -27,13 +27,12 @@ export default function Home() {
           <div className="relative z-10 flex flex-col justify-end flex-1 px-4 md:pl-10 md:pr-32 pt-10 pb-11 md:pt-0 md:pb-11">
             <div className="w-fit">
               <h1 className="text-[2.6rem] sm:text-[2.6rem] md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
-                Plataformas de datos abiertos para transformar tu <span className="logo-comun">comunidad</span>
+                La plataforma de datos abiertos para organizaciones que transforman su <span className="logo-comun">comunidad</span>
               </h1>
             </div>
-            <p className="mt-8 md:mt-16 text-base text-[#475569]">Hablemos.</p>
             <a
               href="mailto:edgar@datacomun.com"
-              className="cta-border mt-2 inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-lg border-b-2 pb-1"
+              className="cta-border mt-8 md:mt-16 inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-lg border-b-2 pb-1"
             >
               edgar@datacomun.com
             </a>
