@@ -30,7 +30,7 @@ export default function Home() {
                 Plataformas de datos abiertos para transformar tu <span className="logo-comun">comunidad</span>
               </h1>
             </div>
-            <p className="mt-8 md:mt-16 text-base text-[#475569]">Hablemos de tu proyecto.</p>
+            <p className="mt-8 md:mt-16 text-base text-[#475569]">Hablemos.</p>
             <a
               href="mailto:edgar@datacomun.com"
               className="cta-border mt-2 inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-lg border-b-2 pb-1"
