@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <a
               href="mailto:edgar@datacomun.com"
-              className="cta-border mt-8 md:mt-16 inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1"
+              className="mt-8 md:mt-16 inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-base"
             >
               edgar@datacomun.com
             </a>
