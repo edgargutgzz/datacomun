@@ -27,7 +27,7 @@ export default function Home() {
           <div className="relative z-10 flex flex-col justify-end flex-1 px-4 md:px-10 pt-10 pb-11 md:pt-0 md:pb-11">
             <div className="w-fit">
               <h1 className="text-[2.6rem] sm:text-[2.6rem] md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
-                Datos abiertos para organizaciones que transforman su <span className="logo-comun">comunidad</span>
+                Herramientas de datos abiertos para organizaciones que transforman su <span className="logo-comun">comunidad</span>
               </h1>
             </div>
             <p className="mt-8 md:mt-16 text-base text-[#475569]">Hablemos de tu proyecto.</p>
