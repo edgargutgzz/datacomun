@@ -59,53 +59,6 @@ export default function Home() {
 
       </div>
 
-      {/* Caso: Observatorio del Aire — section uses the same root-level
-          padding as the hero (no extra inset, no max-width cap), so the
-          banner card matches the hero image's width/edges exactly. The
-          text blocks get their own md:pl-10 wrapper to match the hero
-          copy's deeper inset, mirroring how the hero itself is structured
-          (full-bleed card, inset text). */}
-      <section className="px-4 md:px-6 pt-10 pb-14 md:pb-20">
-        <div className="md:pl-10 flex flex-wrap items-center gap-3 mb-6">
-          <Image
-            src="/observatorio-del-aire-logo.png"
-            alt="Observatorio del Aire"
-            width={1633}
-            height={302}
-            className="h-6 md:h-7 w-auto"
-          />
-          <a
-            href="https://www.observatoriodelaire.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-[#475569] border-b border-[#475569]/40 hover:border-[#475569] transition-colors pb-0.5"
-          >
-            observatoriodelaire.com →
-          </a>
-        </div>
-
-        <div className="md:pl-10 md:pr-10 grid md:grid-cols-3 gap-8 md:gap-6">
-          <div>
-            <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Qué hace</p>
-            <p className="text-[#0f172a]">
-              Reconcilia 152 sensores ciudadanos y 16 estaciones oficiales del SIMA en un mapa de calidad del aire en tiempo real, con histórico, análisis y descargas.
-            </p>
-          </div>
-          <div>
-            <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Desde cuándo</p>
-            <p className="text-[#0f172a]">
-              En operación continua desde 2023. Sin interrupciones, sin traspasos.
-            </p>
-          </div>
-          <div>
-            <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Quién lo usa</p>
-            <p className="text-[#0f172a]">
-              ~16,500 visitantes al año, ~41,000 vistas. Enlazado por sitios municipales, citado por medios locales.
-            </p>
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }
