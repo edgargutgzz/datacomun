@@ -30,9 +30,10 @@ export default function Home() {
                 Una plataforma de datos abiertos para transformar tu <span className="logo-comun">comunidad</span>
               </h1>
             </div>
+            <p className="mt-8 md:mt-16 text-base text-[#475569]">Hablemos.</p>
             <a
               href="mailto:edgar@datacomun.com"
-              className="cta-border mt-8 md:mt-16 inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1"
+              className="cta-border mt-2 inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1"
             >
               edgar@datacomun.com
             </a>
@@ -46,8 +47,18 @@ export default function Home() {
             alt="datacomun — taller de datos con la comunidad"
             className="w-full h-full object-cover object-[45%_center]"
           />
+          <div className="absolute inset-x-0 bottom-3 px-5 flex items-center justify-between gap-3 text-[10px] text-black/40 tracking-wide">
+            <p className="truncate">Edgar Gutiérrez · datacomun</p>
+            <p className="truncate text-right">Fotografía: Equipo de documentación LABNL</p>
+          </div>
         </div>
 
+      </div>
+
+      {/* Trust line — method + proof, plain and factual */}
+      <div className="px-4 md:px-16 py-6 md:py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm text-[#475569]">
+        <p>La misma persona lo diseña, lo construye y lo opera. No hay traspasos.</p>
+        <p className="text-[#94a3b8]">3 años operando · +16,000 personas al año · Monterrey</p>
       </div>
 
     </div>
