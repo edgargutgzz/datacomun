@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Logo from "@/components/Logo";
 import GrainOverlay from "@/components/GrainOverlay";
 
@@ -42,10 +43,13 @@ export default function Home() {
 
         {/* Right column — image */}
         <div className="relative overflow-hidden rounded-b-3xl md:rounded-bl-none md:rounded-tr-3xl min-h-[50vh] md:min-h-[calc(100vh-2.5rem)]">
-          <img
+          <Image
             src="/hero.jpg"
             alt="datacomun — taller de datos con la comunidad"
-            className="w-full h-full object-cover object-[45%_center]"
+            fill
+            priority
+            sizes="(min-width: 768px) 40vw, 100vw"
+            className="object-cover object-[45%_center]"
           />
           <div className="absolute inset-x-0 bottom-3 px-5 flex items-center justify-between gap-3 text-[10px] text-black/40 tracking-wide">
             <p className="truncate">Edgar Gutiérrez · datacomun</p>
@@ -64,9 +68,11 @@ export default function Home() {
       {/* Caso: Observatorio del Aire */}
       <section className="px-4 md:px-16 pt-6 pb-14 md:pb-20">
         <div className="flex flex-wrap items-center gap-3 mb-6">
-          <img
+          <Image
             src="/observatorio-del-aire-logo.png"
             alt="Observatorio del Aire"
+            width={1633}
+            height={302}
             className="h-6 md:h-7 w-auto"
           />
           <a
@@ -80,9 +86,12 @@ export default function Home() {
         </div>
 
         <div className="rounded-3xl overflow-hidden border border-[#e0ddd8]">
-          <img
-            src="/aire-claro.png"
-            alt="Observatorio del Aire — mapa de sensores ciudadanos y estaciones oficiales del SIMA en Monterrey"
+          <Image
+            src="/occamm-mapa.png"
+            alt="Observatorio del Aire — mapa en tiempo real con panel de calidad del aire y tendencia de 48 horas"
+            width={2000}
+            height={1087}
+            sizes="(min-width: 1024px) 90vw, 100vw"
             className="w-full h-auto"
           />
         </div>
