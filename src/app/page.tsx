@@ -59,68 +59,74 @@ export default function Home() {
 
       </div>
 
-      {/* Trust line — method + proof, plain and factual */}
-      <div className="px-4 md:px-16 py-6 md:py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm text-[#475569]">
-        <p>La misma persona lo diseña, lo construye y lo opera. No hay traspasos.</p>
-        <p className="text-[#94a3b8]">3 años operando · +16,000 personas al año · Monterrey</p>
-      </div>
+      {/* Everything below the hero stays contained — full-bleed text on a wide
+          monitor reads as unanchored, "floating" content */}
+      <div className="max-w-6xl mx-auto">
 
-      {/* Caso: Observatorio del Aire */}
-      <section className="px-4 md:px-16 pt-6 pb-14 md:pb-20">
-        <div className="flex flex-wrap items-center gap-3 mb-6">
-          <Image
-            src="/observatorio-del-aire-logo.png"
-            alt="Observatorio del Aire"
-            width={1633}
-            height={302}
-            className="h-6 md:h-7 w-auto"
-          />
-          <a
-            href="https://www.observatoriodelaire.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-[#475569] border-b border-[#475569]/40 hover:border-[#475569] transition-colors pb-0.5"
-          >
-            observatoriodelaire.com →
-          </a>
+        {/* Trust line — method + proof, plain and factual */}
+        <div className="px-4 md:px-6 py-6 md:py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm text-[#475569]">
+          <p>La misma persona lo diseña, lo construye y lo opera. No hay traspasos.</p>
+          <p className="text-[#94a3b8]">3 años operando · +16,000 personas al año · Monterrey</p>
         </div>
 
-        <div className="rounded-3xl overflow-hidden border border-[#e0ddd8]">
-          <Image
-            src="/occamm-mapa.png"
-            alt="Observatorio del Aire — mapa en tiempo real con panel de calidad del aire y tendencia de 48 horas"
-            width={2000}
-            height={1087}
-            sizes="(min-width: 1024px) 90vw, 100vw"
-            className="w-full h-auto"
-          />
-        </div>
+        {/* Caso: Observatorio del Aire */}
+        <section className="px-4 md:px-6 pt-6 pb-14 md:pb-20">
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <Image
+              src="/observatorio-del-aire-logo.png"
+              alt="Observatorio del Aire"
+              width={1633}
+              height={302}
+              className="h-6 md:h-7 w-auto"
+            />
+            <a
+              href="https://www.observatoriodelaire.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#475569] border-b border-[#475569]/40 hover:border-[#475569] transition-colors pb-0.5"
+            >
+              observatoriodelaire.com →
+            </a>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-6 mt-10">
-          <div>
-            <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Qué hace</p>
-            <p className="text-[#0f172a]">
-              Reconcilia 152 sensores ciudadanos y 16 estaciones oficiales del SIMA en un mapa de calidad del aire en tiempo real, con histórico, análisis y descargas.
-            </p>
+          <div className="rounded-3xl overflow-hidden border border-[#e0ddd8]">
+            <Image
+              src="/occamm-mapa.png"
+              alt="Observatorio del Aire — mapa en tiempo real con panel de calidad del aire y tendencia de 48 horas"
+              width={2000}
+              height={1087}
+              sizes="(min-width: 1024px) 90vw, 100vw"
+              className="w-full h-auto"
+            />
           </div>
-          <div>
-            <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Desde cuándo</p>
-            <p className="text-[#0f172a]">
-              En operación continua desde 2023. Sin interrupciones, sin traspasos.
-            </p>
-          </div>
-          <div>
-            <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Quién lo usa</p>
-            <p className="text-[#0f172a]">
-              ~16,500 visitantes al año, ~41,000 vistas. Enlazado por sitios municipales, citado por medios locales.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Cómo empezamos — una línea, no un diagrama */}
-      <div className="px-4 md:px-16 pb-14 md:pb-20 text-sm text-[#94a3b8]">
-        <p>Los proyectos empiezan con una primera versión en vivo, en unas semanas.</p>
+          <div className="grid md:grid-cols-3 gap-8 md:gap-6 mt-10">
+            <div>
+              <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Qué hace</p>
+              <p className="text-[#0f172a]">
+                Reconcilia 152 sensores ciudadanos y 16 estaciones oficiales del SIMA en un mapa de calidad del aire en tiempo real, con histórico, análisis y descargas.
+              </p>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Desde cuándo</p>
+              <p className="text-[#0f172a]">
+                En operación continua desde 2023. Sin interrupciones, sin traspasos.
+              </p>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Quién lo usa</p>
+              <p className="text-[#0f172a]">
+                ~16,500 visitantes al año, ~41,000 vistas. Enlazado por sitios municipales, citado por medios locales.
+              </p>
+            </div>
+          </div>
+
+          {/* Cómo empezamos — una línea, no un diagrama */}
+          <p className="mt-10 md:mt-14 text-sm text-[#94a3b8]">
+            Los proyectos empiezan con una primera versión en vivo, en unas semanas.
+          </p>
+        </section>
+
       </div>
 
     </div>
