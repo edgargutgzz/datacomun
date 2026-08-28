@@ -63,14 +63,8 @@ export default function Home() {
           monitor reads as unanchored, "floating" content */}
       <div className="max-w-6xl mx-auto">
 
-        {/* Trust line — method + proof, plain and factual */}
-        <div className="px-4 md:px-6 py-6 md:py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-4 text-sm text-[#475569]">
-          <p>La misma persona lo diseña, lo construye y lo opera. No hay traspasos.</p>
-          <p className="text-[#94a3b8]">3 años operando · +16,000 personas al año · Monterrey</p>
-        </div>
-
         {/* Caso: Observatorio del Aire */}
-        <section className="px-4 md:px-6 pt-6 pb-14 md:pb-20">
+        <section className="px-4 md:px-6 pt-10 pb-14 md:pb-20">
           <div className="flex flex-wrap items-center gap-3 mb-6">
             <Image
               src="/observatorio-del-aire-logo.png"
@@ -120,11 +114,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-
-          {/* Cómo empezamos — una línea, no un diagrama */}
-          <p className="mt-10 md:mt-14 text-sm text-[#94a3b8]">
-            Los proyectos empiezan con una primera versión en vivo, en unas semanas.
-          </p>
         </section>
 
       </div>
