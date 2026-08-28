@@ -51,10 +51,9 @@ export default function Home() {
             sizes="(min-width: 768px) 40vw, 100vw"
             className="object-cover object-[45%_center]"
           />
-          <div className="absolute inset-x-0 bottom-3 px-5 flex items-center justify-between gap-3 text-[10px] text-black/40 tracking-wide">
-            <p className="truncate">Edgar Gutiérrez · datacomun</p>
-            <p className="truncate text-right">Fotografía: Equipo de documentación LABNL</p>
-          </div>
+          <p className="absolute bottom-3 left-5 text-[10px] text-black/40 tracking-wide truncate">
+            Edgar Gutiérrez · datacomun
+          </p>
         </div>
 
       </div>
