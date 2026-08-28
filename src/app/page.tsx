@@ -61,6 +61,59 @@ export default function Home() {
         <p className="text-[#94a3b8]">3 años operando · +16,000 personas al año · Monterrey</p>
       </div>
 
+      {/* Caso: Observatorio del Aire */}
+      <section className="px-4 md:px-16 pt-6 pb-14 md:pb-20">
+        <div className="flex flex-wrap items-center gap-3 mb-6">
+          <img
+            src="/observatorio-del-aire-logo.png"
+            alt="Observatorio del Aire"
+            className="h-6 md:h-7 w-auto"
+          />
+          <a
+            href="https://www.observatoriodelaire.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-[#475569] border-b border-[#475569]/40 hover:border-[#475569] transition-colors pb-0.5"
+          >
+            observatoriodelaire.com →
+          </a>
+        </div>
+
+        <div className="rounded-3xl overflow-hidden border border-[#e0ddd8]">
+          <img
+            src="/aire-claro.png"
+            alt="Observatorio del Aire — mapa de sensores ciudadanos y estaciones oficiales del SIMA en Monterrey"
+            className="w-full h-auto"
+          />
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 md:gap-6 mt-10">
+          <div>
+            <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Qué hace</p>
+            <p className="text-[#0f172a]">
+              Reconcilia 152 sensores ciudadanos y 16 estaciones oficiales del SIMA en un mapa de calidad del aire en tiempo real, con histórico, análisis y descargas.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Desde cuándo</p>
+            <p className="text-[#0f172a]">
+              En operación continua desde 2023. Sin interrupciones, sin traspasos.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-wide text-[#94a3b8] mb-2">Quién lo usa</p>
+            <p className="text-[#0f172a]">
+              ~16,500 visitantes al año, ~41,000 vistas. Enlazado por sitios municipales, citado por medios locales.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Cómo empezamos — una línea, no un diagrama */}
+      <div className="px-4 md:px-16 pb-14 md:pb-20 text-sm text-[#94a3b8]">
+        <p>Los proyectos empiezan con una primera versión en vivo, en unas semanas.</p>
+      </div>
+
     </div>
   );
 }
