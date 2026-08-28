@@ -59,12 +59,10 @@ export default function Home() {
 
       </div>
 
-      {/* Everything below the hero stays contained — full-bleed text on a wide
-          monitor reads as unanchored, "floating" content */}
-      <div className="max-w-6xl mx-auto">
-
-        {/* Caso: Observatorio del Aire */}
-        <section className="px-4 md:px-6 pt-10 pb-14 md:pb-20">
+      {/* Caso: Observatorio del Aire — left gutter matches the hero's
+          (px-6 root + md:pl-10 here), capped at max-w-6xl (no mx-auto,
+          so it stays left-aligned with the hero instead of re-centering) */}
+      <section className="max-w-6xl px-4 md:pl-10 md:pr-10 pt-10 pb-14 md:pb-20">
           <div className="flex flex-wrap items-center gap-3 mb-6">
             <Image
               src="/observatorio-del-aire-logo.png"
@@ -115,8 +113,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-      </div>
 
     </div>
   );
