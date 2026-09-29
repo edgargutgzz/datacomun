@@ -32,7 +32,7 @@ export default function Home() {
               </h1>
             </div>
             <p className="mt-5 md:mt-6 max-w-xl text-lg md:text-xl text-[#475569] leading-snug">
-              Estudio de datos y diseño en Monterrey, México.
+              Estudio de datos y diseño situado en Monterrey, México.
             </p>
             <p className="mt-8 md:mt-12 text-base text-[#475569]">Hablemos.</p>
             <div className="mt-2 flex flex-wrap items-baseline gap-x-6 gap-y-2">
