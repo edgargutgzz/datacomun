@@ -26,7 +26,6 @@ export default function Home() {
 
           {/* Copy */}
           <div className="relative z-10 flex flex-col justify-end flex-1 px-4 md:pl-10 md:pr-32 pt-10 pb-8 md:pt-0 md:pb-11">
-            <p className="mb-4 md:mb-6 text-sm text-[#475569]">Estudio de datos y diseño · Monterrey</p>
             <div className="w-fit">
               <h1 className="text-[2.6rem] sm:text-[2.6rem] md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
                 Recolectar, limpiar y comunicar <span className="logo-comun">datos públicos</span>.
