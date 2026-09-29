@@ -34,21 +34,22 @@ export default function Home() {
             <p className="mt-5 md:mt-6 max-w-xl text-lg md:text-xl text-[#475569] leading-snug">
               Estudio de datos y diseño situado en Monterrey, México.
             </p>
-            <p className="mt-8 md:mt-12 text-base text-[#475569]">Hablemos.</p>
-            <div className="mt-2 flex flex-wrap items-baseline gap-x-6 gap-y-2">
+            <p className="mt-8 md:mt-12 text-base text-[#475569]">Disponible para proyectos nuevos.</p>
+            <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-2">
               <a
                 href="mailto:hola@datacomun.com"
                 className="cta-border inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1"
               >
                 hola@datacomun.com
               </a>
+              <span className="text-[#94a3b8]" aria-hidden="true">·</span>
               <a
-                href="https://www.instagram.com/data.comun"
+                href="https://ig.me/m/data.comun"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-base text-[#475569] border-b-2 border-transparent pb-1 hover:text-[#0f172a] hover:border-[#0f172a] transition-colors"
               >
-                Instagram
+                o por mensaje en Instagram
               </a>
             </div>
           </div>
