@@ -54,7 +54,7 @@ export default function CoverageGrid() {
   return (
     <div className="flex flex-1 flex-col">
       <p className="text-sm text-white/80 leading-snug">
-        Cobertura de estaciones en la Zona Metropolitana de Monterrey
+        Cobertura de estaciones de monitoreo de calidad del aire
       </p>
       <div className="mt-2 mb-5 flex gap-4 text-xs text-white/50">
         <span className="flex items-center gap-1.5">
