@@ -32,7 +32,7 @@ export default function Home() {
               </h1>
             </div>
             <p className="mt-5 md:mt-6 max-w-xl text-lg md:text-xl text-[#475569] leading-snug">
-              Un estudio de datos y diseño para que las organizaciones cívicas puedan usarlos y defenderlos ante quien las financia.
+              Estudio de datos y diseño para que las organizaciones cívicas puedan usarlos y defenderlos ante quien las financia.
             </p>
             <p className="mt-8 md:mt-12 text-base text-[#475569]">Hablemos.</p>
             <a
