@@ -34,22 +34,23 @@ export default function Home() {
             <p className="mt-5 md:mt-6 max-w-xl text-lg md:text-xl text-[#475569] leading-snug">
               Estudio de datos y diseño situado en Monterrey, México.
             </p>
-            <p className="mt-8 md:mt-12 text-base text-[#475569]">Contacto en:</p>
-            <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-2">
+            <p className="mt-8 md:mt-12 text-base text-[#475569]">Contacto</p>
+            <div className="mt-2 flex flex-wrap items-baseline gap-x-8 gap-y-2">
               <a
                 href="mailto:hola@datacomun.com"
-                className="cta-border inline-flex w-fit items-center gap-3 text-[#0f172a] font-medium text-base border-b-2 pb-1"
+                className="cta-border group inline-flex w-fit items-center gap-2 text-[#0f172a] font-medium text-base border-b-2 pb-1"
               >
+                <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
                 hola@datacomun.com
               </a>
-              <span className="text-[#94a3b8]" aria-hidden="true">·</span>
               <a
                 href="https://www.instagram.com/data.comun"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base text-[#475569] border-b-2 border-transparent pb-1 hover:text-[#0f172a] hover:border-[#0f172a] transition-colors"
+                className="cta-border group inline-flex w-fit items-center gap-2 text-[#0f172a] font-medium text-base border-b-2 pb-1"
               >
-                o por mensaje en Instagram
+                <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
+                Instagram
               </a>
             </div>
           </div>
