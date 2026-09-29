@@ -44,7 +44,7 @@ export default function Home() {
               </a>
               <span className="text-[#94a3b8]" aria-hidden="true">·</span>
               <a
-                href="https://ig.me/m/data.comun"
+                href="https://www.instagram.com/data.comun"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-base text-[#475569] border-b-2 border-transparent pb-1 hover:text-[#0f172a] hover:border-[#0f172a] transition-colors"
