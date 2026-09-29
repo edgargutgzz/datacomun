@@ -133,12 +133,12 @@ export default function CoverageGrid() {
         )}
       </p>
       <a
-        href="https://www.aireclaro.com/datos#:~:text=Cobertura%20de%20estaciones"
+        href="https://www.observatoriodelaire.com/datos#:~:text=Cobertura%20de%20estaciones"
         target="_blank"
         rel="noopener noreferrer"
         className="mt-2 w-fit text-xs text-white/70 underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white transition-colors"
       >
-        Ver la gráfica completa en aireclaro.com →
+        Ver la gráfica completa en observatoriodelaire.com →
       </a>
     </div>
   );
