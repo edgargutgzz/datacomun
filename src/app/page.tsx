@@ -34,7 +34,7 @@ export default function Home() {
             <p className="mt-5 md:mt-6 max-w-xl text-lg md:text-xl text-[#475569] leading-snug">
               Estudio de datos y diseño situado en Monterrey, México.
             </p>
-            <p className="mt-8 md:mt-12 text-base text-[#475569]">Disponible para nuevos proyectos en</p>
+            <p className="mt-8 md:mt-12 text-base text-[#475569]">Disponible para nuevos proyectos en:</p>
             <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-2">
               <a
                 href="mailto:hola@datacomun.com"
