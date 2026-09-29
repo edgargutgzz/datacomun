@@ -125,11 +125,7 @@ export default function CoverageGrid() {
             {fecha(hover.day)}: {active.dias[hover.day] === "1" ? "con datos" : "datos insuficientes"}
           </>
         ) : (
-          <>
-            Cada barra es una estación y cada línea, un día.
-            <br />
-            Pasa el cursor o toca una barra para ver la estación.
-          </>
+          "Cada barra es una estación y cada línea, un día."
         )}
       </p>
       <a
