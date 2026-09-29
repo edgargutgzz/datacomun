@@ -54,7 +54,7 @@ export default function CoverageGrid() {
   return (
     <div className="flex flex-1 flex-col">
       <p className="text-sm text-white/80 leading-snug">
-        ¿Qué días registraron datos las estaciones de calidad del aire de Monterrey?
+        ¿Qué tan bien se mide la calidad del aire en Monterrey?
       </p>
       <div className="mt-2 mb-5 flex gap-4 text-xs text-white/50">
         <span className="flex items-center gap-1.5">
