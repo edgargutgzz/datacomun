@@ -28,11 +28,11 @@ export default function Home() {
           <div className="relative z-10 flex flex-col justify-end flex-1 px-4 md:pl-10 md:pr-32 pt-10 pb-8 md:pt-0 md:pb-11">
             <div className="w-fit">
               <h1 className="text-[2.6rem] sm:text-[2.6rem] md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
-                Recolectar, limpiar y comunicar <span className="logo-comun">datos públicos</span>.
+                Un estudio de <span className="logo-comun">datos y diseño</span> para organizaciones cívicas.
               </h1>
             </div>
             <p className="mt-5 md:mt-6 max-w-xl text-lg md:text-xl text-[#475569] leading-snug">
-              Para que las organizaciones cívicas puedan usarlos y defenderlos ante quien las financia.
+              Recolección, limpieza y comunicación de datos públicos, para usarlos y defenderlos ante quien las financia.
             </p>
             <p className="mt-8 md:mt-12 text-base text-[#475569]">Hablemos.</p>
             <a

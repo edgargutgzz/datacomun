@@ -11,7 +11,7 @@ const inter = Inter({
 
 const title = "datacomun";
 const description =
-  "Una plataforma de datos abiertos, diseñada, construida y operada para organizaciones que trabajan temas públicos. Tres años en operación continua en Monterrey.";
+  "Estudio de datos y diseño en Monterrey para organizaciones cívicas. Recolección, limpieza y comunicación de datos públicos; tres años operando el Observatorio del Aire.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://datacomun.com"),
