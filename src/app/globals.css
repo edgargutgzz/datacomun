@@ -33,16 +33,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hide Mapbox controls */
-.mapboxgl-ctrl,
-.mapboxgl-ctrl-group,
-.mapboxgl-ctrl-logo,
-.mapboxgl-ctrl-attrib,
-.mapboxgl-ctrl-bottom-left,
-.mapboxgl-ctrl-bottom-right {
-  display: none !important;
-}
-
 /* Logo color cycle */
 @keyframes colorCycle {
   0%   { color: #06b6d4; }
