@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   description: `${headline} ${description}`,
   openGraph: {
-    title: headline,
-    description,
+    title: "datacomun",
+    description: `${headline} ${description}`,
     url: "https://datacomun.com",
     siteName: "datacomun",
     locale: "es_MX",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: headline,
-    description,
+    title: "datacomun",
+    description: `${headline} ${description}`,
   },
 };
 
