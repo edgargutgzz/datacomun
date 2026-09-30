@@ -27,13 +27,11 @@ export const metadata: Metadata = {
     siteName: "datacomun",
     locale: "es_MX",
     type: "website",
-    images: ["/hero.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/hero.jpg"],
   },
 };
 
