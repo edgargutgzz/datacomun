@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 const title = "datacomun — Estudio de datos y diseño";
-const description =
-  "Recolectar, limpiar y comunicar datos públicos. Estudio de datos y diseño para organizaciones de la sociedad civil.";
+const headline = "Recolectar, limpiar y comunicar datos públicos.";
+const description = "Estudio de datos y diseño para organizaciones de la sociedad civil.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://datacomun.com"),
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     default: title,
     template: "%s | datacomun",
   },
-  description,
+  description: `${headline} ${description}`,
   openGraph: {
-    title,
+    title: headline,
     description,
     url: "https://datacomun.com",
     siteName: "datacomun",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title,
+    title: headline,
     description,
   },
 };
