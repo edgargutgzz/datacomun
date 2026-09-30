@@ -9,9 +9,9 @@ const inter = Inter({
   display: "swap",
 });
 
-const title = "datacomun";
+const title = "datacomun — Estudio de datos y diseño";
 const description =
-  "Estudio de datos y diseño en Monterrey para organizaciones cívicas. Recolección, limpieza y comunicación de datos públicos; tres años operando el Observatorio del Aire.";
+  "Recolectar, limpiar y comunicar datos públicos. Estudio de datos y diseño para organizaciones cívicas, situado en Monterrey.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://datacomun.com"),
