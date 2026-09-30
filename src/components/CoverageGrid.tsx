@@ -134,7 +134,7 @@ export default function CoverageGrid() {
         rel="noopener noreferrer"
         className="mt-2 w-fit text-xs text-white/70 underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white transition-colors"
       >
-        Ver la gráfica completa en observatoriodelaire.com →
+        Desarrollamos y mantenemos observatoriodelaire.com desde 2024.
       </a>
     </div>
   );

@@ -32,7 +32,7 @@ export default function Home() {
               </h1>
             </div>
             <p className="mt-5 md:mt-6 max-w-xl text-lg md:text-xl text-[#475569] leading-snug">
-              Estudio de datos y diseño para organizaciones cívicas, situado en Monterrey.
+              Estudio de datos y diseño para organizaciones de la sociedad civil.
             </p>
             <p className="mt-8 md:mt-12 text-base text-[#475569]">Contacto</p>
             <div className="mt-2 flex flex-wrap items-baseline gap-x-8 gap-y-2">
