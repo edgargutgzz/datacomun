@@ -57,7 +57,7 @@ export default function Home() {
         </div>
 
         {/* Right column — daily PM2.5 coverage, Observatorio del Aire */}
-        <div className="relative flex flex-col overflow-hidden rounded-b-3xl md:rounded-bl-none md:rounded-tr-3xl min-h-[50vh] md:min-h-[calc(100vh-2.5rem)] bg-[#0f172a] px-6 md:px-10 pt-8 md:pt-10 pb-6 md:pb-8">
+        <div className="relative flex flex-col overflow-hidden rounded-b-3xl md:rounded-bl-none md:rounded-tr-3xl min-h-[85svh] md:min-h-[calc(100vh-2.5rem)] bg-[#0f172a] px-6 md:px-10 pt-8 md:pt-10 pb-6 md:pb-8">
           <CoverageGrid />
         </div>
 
