@@ -132,9 +132,10 @@ export default function CoverageGrid() {
         href="https://www.observatoriodelaire.com/datos"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-2 w-fit text-xs text-white/70 underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white transition-colors"
+        className="group -mx-6 md:-mx-10 -mb-6 md:-mb-8 mt-2 flex items-center justify-between gap-4 border-t border-white/10 bg-white/[0.06] px-6 md:px-10 py-4 md:py-5 text-sm text-white/90 hover:bg-white/10 hover:text-white transition-colors"
       >
-        Desarrollamos y mantenemos observatoriodelaire.com desde 2024.
+        <span>Desarrollamos y mantenemos observatoriodelaire.com desde 2024.</span>
+        <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
       </a>
     </div>
   );
