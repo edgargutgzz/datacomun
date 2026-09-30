@@ -66,7 +66,7 @@ export default function CoverageGrid() {
           Datos insuficientes
         </span>
       </div>
-      <div className="flex flex-1 gap-2">
+      <div className="flex flex-1 gap-2 select-none [-webkit-touch-callout:none] [-webkit-tap-highlight-color:transparent]">
         <div className="relative w-7 text-[10px] text-white/40">
           {MESES.map((m, i) => (
             <span key={m} className="absolute left-0" style={{ top: `${(INICIO_MES[i] / days) * 100}%` }}>
@@ -78,7 +78,7 @@ export default function CoverageGrid() {
           <svg
             viewBox={`0 0 ${width} ${days}`}
             preserveAspectRatio="none"
-            className="absolute inset-0 h-full w-full cursor-crosshair"
+            className="absolute inset-0 h-full w-full cursor-crosshair touch-pan-y"
             shapeRendering="crispEdges"
             role="img"
             aria-label={`Cobertura diaria de PM2.5 en ${columns.length} estaciones de Monterrey, 2026`}
