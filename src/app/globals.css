@@ -4,8 +4,6 @@
   /* Colors */
   --color-background: #f9f7f4;
   --color-foreground: #111111;
-  --color-muted: #888888;
-  --color-border: #e0ddd8;
   --color-accent: #1a1a2e;
 
   /* Typography */
@@ -15,14 +13,6 @@
 :root {
   --background: var(--color-background);
   --foreground: var(--color-foreground);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
