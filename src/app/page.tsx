@@ -2,16 +2,19 @@ import CoverageGrid from "@/components/CoverageGrid";
 import Logo from "@/components/Logo";
 import GrainOverlay from "@/components/GrainOverlay";
 
+// Right-hand coverage chart is hidden for now; flip to true to bring it back.
+const SHOW_COVERAGE = false;
+
 export default function Home() {
   return (
     <div className="px-4 md:px-6 py-3 md:py-5">
 
       {/* Hero — split screen */}
-      <div className="min-h-[calc(100vh-1.5rem)] md:min-h-[calc(100vh-2.5rem)] grid md:grid-cols-[1.2fr_0.8fr]">
+      <div className={`min-h-[calc(100vh-1.5rem)] md:min-h-[calc(100vh-2.5rem)] grid ${SHOW_COVERAGE ? "md:grid-cols-[1.2fr_0.8fr]" : ""}`}>
 
         {/* Left column — nav + copy */}
         <div
-          className="relative flex flex-col overflow-hidden rounded-t-3xl md:rounded-tr-none md:rounded-bl-3xl md:min-h-[calc(100vh-2.5rem)]"
+          className={`relative flex flex-col overflow-hidden md:min-h-[calc(100vh-2.5rem)] ${SHOW_COVERAGE ? "rounded-t-3xl md:rounded-tr-none md:rounded-bl-3xl" : "rounded-3xl"}`}
           style={{
             background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
           }}
@@ -48,9 +51,11 @@ export default function Home() {
         </div>
 
         {/* Right column — daily PM2.5 coverage, Observatorio del Aire */}
+        {SHOW_COVERAGE && (
         <div className="relative flex flex-col overflow-hidden rounded-b-3xl md:rounded-bl-none md:rounded-tr-3xl min-h-[85svh] md:min-h-[calc(100vh-2.5rem)] bg-[#0f172a] px-6 md:px-10 pt-8 md:pt-10 pb-6 md:pb-8">
           <CoverageGrid />
         </div>
+        )}
 
       </div>
 
