@@ -10,7 +10,7 @@ export default function Home() {
     <div className="px-4 md:px-6 py-3 md:py-5">
 
       {/* Hero — split screen */}
-      <div className={`min-h-[calc(100vh-1.5rem)] md:min-h-[calc(100vh-2.5rem)] grid ${SHOW_COVERAGE ? "md:grid-cols-[1.2fr_0.8fr]" : ""}`}>
+      <div className={`md:min-h-[calc(100vh-2.5rem)] grid ${SHOW_COVERAGE ? "min-h-[calc(100vh-1.5rem)] md:grid-cols-[1.2fr_0.8fr]" : ""}`}>
 
         {/* Left column — nav + copy */}
         <div
