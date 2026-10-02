@@ -28,24 +28,24 @@ export default function Home() {
           </header>
 
           {/* Copy */}
-          <div className="relative z-10 flex flex-col justify-end flex-1 px-4 md:pl-10 md:pr-32 pt-10 pb-8 md:pt-0 md:pb-11">
-            <div className="w-fit">
-              <h1 className="text-[2.6rem] sm:text-[2.6rem] md:text-7xl font-semibold text-[#0f172a] leading-[1.05] tracking-tight">
-                Recolectar, limpiar y comunicar <span className="logo-comun">datos públicos</span>.
-              </h1>
-            </div>
-            <p className="mt-5 md:mt-6 max-w-xl text-lg md:text-xl text-[#475569] leading-snug">
-              Estudio de datos y diseño para organizaciones de la sociedad civil.
-            </p>
-            <p className="mt-8 md:mt-12 text-base text-[#475569]">Contacto</p>
-            <div className="mt-2 flex flex-wrap items-baseline gap-x-8 gap-y-2">
-              <a
-                href="mailto:hola@datacomun.com"
-                className="cta-border group inline-flex w-fit items-center gap-2 text-[#0f172a] font-medium text-base border-b-2 pb-1"
-              >
-                <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
-                hola@datacomun.com
-              </a>
+          <div className="relative z-10 flex flex-col justify-end flex-1 px-4 md:px-10 pt-10 pb-8 md:pt-0 md:pb-11">
+            <h1 className="max-w-[18ch] text-[2.6rem] sm:text-[2.6rem] md:text-8xl xl:text-[7.5rem] font-semibold text-[#0f172a] leading-[1.02] tracking-tight">
+              Recolectar, limpiar y comunicar <span className="logo-comun">datos públicos</span>.
+            </h1>
+            <div className="mt-5 md:mt-12 md:pt-8 md:border-t md:border-[#0f172a]/10 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+              <p className="max-w-xl text-lg md:text-2xl text-[#475569] leading-snug">
+                Estudio de datos y diseño para organizaciones de la sociedad civil.
+              </p>
+              <div className="md:text-right">
+                <p className="text-base text-[#475569]">Contacto</p>
+                <a
+                  href="mailto:hola@datacomun.com"
+                  className="cta-border group mt-2 inline-flex w-fit items-center gap-2 text-[#0f172a] font-medium text-base md:text-lg border-b-2 pb-1"
+                >
+                  <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
+                  hola@datacomun.com
+                </a>
+              </div>
             </div>
           </div>
         </div>
