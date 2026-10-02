@@ -33,7 +33,7 @@ export default function Home() {
               Recolectar, limpiar y comunicar <span className="logo-comun">datos públicos</span>.
             </h1>
             <div className="mt-5 md:mt-12 md:pt-8 md:border-t md:border-[#0f172a]/10 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-              <p className="max-w-xl text-lg md:text-xl text-[#475569] leading-snug">
+              <p className="max-w-xl lg:max-w-none lg:whitespace-nowrap text-lg md:text-xl text-[#475569] leading-snug">
                 Estudio de datos y diseño para organizaciones de la sociedad civil.
               </p>
               <div className="md:text-right">
