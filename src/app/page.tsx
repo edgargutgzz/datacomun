@@ -1,6 +1,7 @@
 import CoverageGrid from "@/components/CoverageGrid";
 import Logo from "@/components/Logo";
 import GrainOverlay from "@/components/GrainOverlay";
+import ParticleField from "@/components/ParticleField";
 
 // Right-hand coverage chart is hidden for now; flip to true to bring it back.
 const SHOW_COVERAGE = false;
@@ -19,6 +20,7 @@ export default function Home() {
             background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
           }}
         >
+          <ParticleField />
           <GrainOverlay />
 
 
