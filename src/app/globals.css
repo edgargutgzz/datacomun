@@ -36,6 +36,18 @@ body {
   animation: colorCycle 6s ease-in-out infinite;
 }
 
+@keyframes strokeColorCycle {
+  0%   { stroke: #06b6d4; }
+  33%  { stroke: #8b5cf6; }
+  66%  { stroke: #ec4899; }
+  100% { stroke: #06b6d4; }
+}
+
+.cta-stroke {
+  stroke: #06b6d4;
+  animation: strokeColorCycle 6s ease-in-out infinite;
+}
+
 /* Full-screen pages (the homepage hero) don't scroll or rubber-band */
 html:has(.lock-scroll),
 html:has(.lock-scroll) body {
