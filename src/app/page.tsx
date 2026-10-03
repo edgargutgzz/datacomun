@@ -2,6 +2,7 @@ import CoverageGrid from "@/components/CoverageGrid";
 import Logo from "@/components/Logo";
 import GrainOverlay from "@/components/GrainOverlay";
 import ParticleField from "@/components/ParticleField";
+import SpringyLine from "@/components/SpringyLine";
 import SpringyText from "@/components/SpringyText";
 
 // Right-hand coverage chart is hidden for now; flip to true to bring it back.
@@ -43,10 +44,11 @@ export default function Home() {
                 <p className="text-base text-[#475569]"><SpringyText text="Contacto" /></p>
                 <a
                   href="mailto:hola@datacomun.com"
-                  className="cta-border group mt-2 inline-flex w-fit items-center gap-2 text-[#0f172a] font-medium text-base md:text-lg border-b-2 pb-1"
+                  className="group relative mt-2 inline-flex w-fit items-center gap-2 text-[#0f172a] font-medium text-base md:text-lg pb-1.5"
                 >
                   <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
                   <SpringyText text="hola@datacomun.com" />
+                  <SpringyLine />
                 </a>
               </div>
             </div>

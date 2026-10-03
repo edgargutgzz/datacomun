@@ -48,6 +48,18 @@ body {
   animation: borderColorCycle 6s ease-in-out infinite;
 }
 
+@keyframes strokeColorCycle {
+  0%   { stroke: #06b6d4; }
+  33%  { stroke: #8b5cf6; }
+  66%  { stroke: #ec4899; }
+  100% { stroke: #06b6d4; }
+}
+
+.cta-stroke {
+  stroke: #06b6d4;
+  animation: strokeColorCycle 6s ease-in-out infinite;
+}
+
 /* Focus visible for accessibility */
 :focus-visible {
   outline: 2px solid var(--color-accent);
