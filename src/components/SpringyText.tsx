@@ -1,17 +1,15 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { disturbance, RIPPLE_LIFE, RIPPLE_SPEED } from "@/lib/disturbance";
+import { disturbance } from "@/lib/disturbance";
 
 const PUSH_RADIUS = 150;
 const PUSH_FORCE = 1.6;
-const RIPPLE_BAND = 40;
-const RIPPLE_FORCE = 1.2;
 const SPRING = 0.06;
 const DAMPING = 0.84;
 
 type Letter = { el: HTMLSpanElement; hx: number; hy: number; x: number; y: number; vx: number; vy: number };
 
-// Splits text into letters that get nudged by the hero's cursor and ripples, then spring back.
+// Splits text into letters that get nudged by the hero's cursor, then spring back.
 export default function SpringyText({ text, highlight }: { text: string; highlight?: string }) {
   const rootRef = useRef<HTMLSpanElement>(null);
 
@@ -48,10 +46,10 @@ export default function SpringyText({ text, highlight }: { text: string; highlig
     };
 
     let measured = false;
-    const loop = (now: number) => {
+    const loop = () => {
       if (!running) return;
       if (!measured) measured = measure();
-      const { pointer, ripples } = disturbance;
+      const { pointer } = disturbance;
 
       for (const l of letters) {
         const cx = l.hx + l.x;
@@ -63,19 +61,6 @@ export default function SpringyText({ text, highlight }: { text: string; highlig
           const dist = Math.hypot(dx, dy);
           if (dist < PUSH_RADIUS && dist > 0.01) {
             const f = (1 - dist / PUSH_RADIUS) ** 2 * PUSH_FORCE;
-            l.vx += (dx / dist) * f;
-            l.vy += (dy / dist) * f;
-          }
-        }
-
-        for (const r of ripples) {
-          const age = now - r.start;
-          const dx = l.hx - r.x;
-          const dy = l.hy - r.y;
-          const dist = Math.hypot(dx, dy) || 1;
-          const band = Math.abs(dist - age * RIPPLE_SPEED);
-          if (band < RIPPLE_BAND) {
-            const f = (1 - band / RIPPLE_BAND) * (1 - age / RIPPLE_LIFE) * RIPPLE_FORCE;
             l.vx += (dx / dist) * f;
             l.vy += (dy / dist) * f;
           }

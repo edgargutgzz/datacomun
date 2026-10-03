@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { disturbance, RIPPLE_LIFE, RIPPLE_SPEED, type Ripple } from "@/lib/disturbance";
+import { disturbance } from "@/lib/disturbance";
 
 // Brand cycle: cyan → violet → pink
 const PALETTE: [number, number, number][] = [
@@ -14,7 +14,6 @@ const MAX_RADIUS = 2.4;
 const PUSH_RADIUS = 110;
 const SPRING = 0.045;
 const DAMPING = 0.86;
-const IDLE_RIPPLE_EVERY = 3200; // ms without interaction before a ripple appears on its own
 
 type Dot = { hx: number; hy: number; x: number; y: number; vx: number; vy: number; glow: number };
 
@@ -51,9 +50,7 @@ export default function ParticleField() {
     let raf = 0;
     let running = true;
     let dots: Dot[] = [];
-    let ripples: Ripple[] = [];
     let pointer: { x: number; y: number } | null = null;
-    let lastInteraction = performance.now();
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -77,23 +74,12 @@ export default function ParticleField() {
       return x >= 0 && y >= 0 && x <= r.width && y <= r.height ? { x, y } : null;
     };
 
-    const addRipple = (x: number, y: number, now: number) => {
-      ripples.push({ x, y, start: now, hue: Math.random() });
-      if (ripples.length > 6) ripples.shift();
-    };
-
     const draw = (now: number) => {
       const t = now / 4000;
       ctx.clearRect(0, 0, w, h);
 
-      ripples = ripples.filter((r) => now - r.start < RIPPLE_LIFE);
-      if (!reduceMotion && now - lastInteraction > IDLE_RIPPLE_EVERY) {
-        addRipple(w * (0.35 + Math.random() * 0.6), h * (0.05 + Math.random() * 0.5), now);
-        lastInteraction = now;
-      }
       disturbance.origin = canvas;
       disturbance.pointer = pointer;
-      disturbance.ripples = ripples;
 
       for (const d of dots) {
         // Cursor pushes dots away.
@@ -109,25 +95,6 @@ export default function ParticleField() {
           }
         }
 
-        // Ripples kick dots outward as the ring passes.
-        let tint = -1;
-        for (const r of ripples) {
-          const age = now - r.start;
-          const ring = age * RIPPLE_SPEED;
-          const dx = d.hx - r.x;
-          const dy = d.hy - r.y;
-          const dist = Math.hypot(dx, dy) || 1;
-          const band = Math.abs(dist - ring);
-          if (band < 18) {
-            const fade = 1 - age / RIPPLE_LIFE;
-            const f = (1 - band / 18) * fade * 1.6;
-            d.vx += (dx / dist) * f;
-            d.vy += (dy / dist) * f;
-            d.glow = Math.max(d.glow, fade);
-            tint = r.hue + dist / 900;
-          }
-        }
-
         // Springy return home — underdamped so dots wobble.
         d.vx = (d.vx + (d.hx - d.x) * SPRING) * DAMPING;
         d.vy = (d.vy + (d.hy - d.y) * SPRING) * DAMPING;
@@ -140,7 +107,7 @@ export default function ParticleField() {
         const alpha = Math.min(d.glow * 0.9, 0.95);
         if (alpha < 0.03) continue;
 
-        const [r, g, b] = mix(tint >= 0 ? tint : (d.hx / w) * 0.6 + v * 0.25 + t * 0.05);
+        const [r, g, b] = mix((d.hx / w) * 0.6 + v * 0.25 + t * 0.05);
         const radius = 0.6 + v * MAX_RADIUS + d.glow * 2.6;
         ctx.fillStyle = `rgba(${r | 0},${g | 0},${b | 0},${alpha})`;
         ctx.beginPath();
@@ -157,7 +124,6 @@ export default function ParticleField() {
 
     const onPointerMove = (e: PointerEvent) => {
       pointer = toLocal(e.clientX, e.clientY);
-      if (pointer) lastInteraction = performance.now();
     };
     const onPointerLeave = () => {
       pointer = null;
@@ -165,13 +131,6 @@ export default function ParticleField() {
     // Fingers don't hover — let go of the push once a touch ends.
     const onPointerUp = (e: PointerEvent) => {
       if (e.pointerType !== "mouse") pointer = null;
-    };
-    const onPointerDown = (e: PointerEvent) => {
-      const p = toLocal(e.clientX, e.clientY);
-      if (!p) return;
-      const now = performance.now();
-      addRipple(p.x, p.y, now);
-      lastInteraction = now;
     };
 
     const onVisibility = () => {
@@ -195,7 +154,6 @@ export default function ParticleField() {
     raf = requestAnimationFrame(loop);
     window.addEventListener("resize", onResize);
     window.addEventListener("pointermove", onPointerMove, { passive: true });
-    window.addEventListener("pointerdown", onPointerDown, { passive: true });
     window.addEventListener("pointerup", onPointerUp, { passive: true });
     document.documentElement.addEventListener("pointerleave", onPointerLeave);
     document.addEventListener("visibilitychange", onVisibility);
@@ -203,11 +161,9 @@ export default function ParticleField() {
       running = false;
       disturbance.origin = null;
       disturbance.pointer = null;
-      disturbance.ripples = [];
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("pointermove", onPointerMove);
-      window.removeEventListener("pointerdown", onPointerDown);
       window.removeEventListener("pointerup", onPointerUp);
       document.documentElement.removeEventListener("pointerleave", onPointerLeave);
       document.removeEventListener("visibilitychange", onVisibility);
