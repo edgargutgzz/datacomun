@@ -37,16 +37,16 @@ export default function Home() {
             </h1>
             <div className="mt-5 md:mt-12 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
               <p className="max-w-xl lg:max-w-none lg:whitespace-nowrap text-lg md:text-xl text-[#475569] leading-snug">
-                Estudio de datos y diseño para organizaciones de la sociedad civil.
+                <SpringyText text="Estudio de datos y diseño para organizaciones de la sociedad civil." />
               </p>
               <div className="md:text-right">
-                <p className="text-base text-[#475569]">Contacto</p>
+                <p className="text-base text-[#475569]"><SpringyText text="Contacto" /></p>
                 <a
                   href="mailto:hola@datacomun.com"
                   className="cta-border group mt-2 inline-flex w-fit items-center gap-2 text-[#0f172a] font-medium text-base md:text-lg border-b-2 pb-1"
                 >
                   <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
-                  hola@datacomun.com
+                  <SpringyText text="hola@datacomun.com" />
                 </a>
               </div>
             </div>
