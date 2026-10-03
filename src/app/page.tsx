@@ -33,7 +33,7 @@ export default function Home() {
           {/* Copy */}
           <div className="relative z-10 flex flex-col justify-end flex-1 px-4 md:px-10 pt-10 pb-8 md:pt-0 md:pb-11">
             <h1 className="max-w-[18ch] text-[2.6rem] sm:text-[2.6rem] md:text-8xl xl:text-[7.5rem] font-semibold text-[#0f172a] leading-[1.02] tracking-tight">
-              <SpringyText text="Recolectar, limpiar y comunicar datos públicos." />
+              <SpringyText text="Recolectar, limpiar y comunicar datos públicos." highlight="datos públicos" />
             </h1>
             <div className="mt-5 md:mt-12 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
               <p className="max-w-xl lg:max-w-none lg:whitespace-nowrap text-lg md:text-xl text-[#475569] leading-snug">

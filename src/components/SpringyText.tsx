@@ -12,7 +12,7 @@ const DAMPING = 0.84;
 type Letter = { el: HTMLSpanElement; hx: number; hy: number; x: number; y: number; vx: number; vy: number };
 
 // Splits text into letters that get nudged by the hero's cursor and ripples, then spring back.
-export default function SpringyText({ text }: { text: string }) {
+export default function SpringyText({ text, highlight }: { text: string; highlight?: string }) {
   const rootRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -117,23 +117,35 @@ export default function SpringyText({ text }: { text: string }) {
     };
   }, []);
 
+  // Character range of `highlight` within `text`, colored with the brand cycle.
+  const hlStart = highlight ? text.indexOf(highlight) : -1;
+  const hlEnd = hlStart >= 0 ? hlStart + highlight!.length : -1;
   const words = text.split(" ");
+  let offset = 0;
   return (
     <span ref={rootRef}>
       <span className="sr-only">{text}</span>
       <span aria-hidden="true">
-        {words.map((word, wi) => (
-          <span key={wi}>
-            <span className="inline-block whitespace-nowrap">
-              {Array.from(word).map((ch, ci) => (
-                <span key={ci} data-letter className="inline-block will-change-transform">
-                  {ch}
-                </span>
-              ))}
+        {words.map((word, wi) => {
+          const wordStart = offset;
+          offset += word.length + 1;
+          return (
+            <span key={wi}>
+              <span className="inline-block whitespace-nowrap">
+                {Array.from(word).map((ch, ci) => {
+                  const i = wordStart + ci;
+                  const lit = i >= hlStart && i < hlEnd;
+                  return (
+                    <span key={ci} data-letter className={`inline-block will-change-transform${lit ? " logo-comun" : ""}`}>
+                      {ch}
+                    </span>
+                  );
+                })}
+              </span>
+              {wi < words.length - 1 && " "}
             </span>
-            {wi < words.length - 1 && " "}
-          </span>
-        ))}
+          );
+        })}
       </span>
     </span>
   );
