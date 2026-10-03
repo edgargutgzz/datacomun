@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { disturbance } from "@/lib/disturbance";
+import { burstPush, disturbance } from "@/lib/disturbance";
 
 // Brand cycle: cyan → violet → pink
 const PALETTE: [number, number, number][] = [
@@ -14,6 +14,7 @@ const MAX_RADIUS = 2.4;
 const PUSH_RADIUS = 110;
 const SPRING = 0.045;
 const DAMPING = 0.86;
+const BURST_DELAY = 700; // ms after mount
 
 type Dot = { hx: number; hy: number; x: number; y: number; vx: number; vy: number; glow: number };
 
@@ -49,6 +50,8 @@ export default function ParticleField() {
     let h = 0;
     let raf = 0;
     let running = true;
+    let burstFired = false;
+    const mountedAt = performance.now();
     let dots: Dot[] = [];
     let pointer: { x: number; y: number } | null = null;
 
@@ -80,6 +83,10 @@ export default function ParticleField() {
 
       disturbance.origin = canvas;
       disturbance.pointer = pointer;
+      if (!burstFired && now - mountedAt > BURST_DELAY) {
+        disturbance.burst = { x: w * 0.5, y: h * 0.5, start: now };
+        burstFired = true;
+      }
 
       for (const d of dots) {
         // Cursor pushes dots away.
@@ -93,6 +100,13 @@ export default function ParticleField() {
             d.vy += (dy / dist) * f;
             d.glow = Math.max(d.glow, 1 - dist / PUSH_RADIUS);
           }
+        }
+
+        const kick = burstPush(d.hx, d.hy, now, 18);
+        if (kick) {
+          d.vx += kick.fx * 1.6;
+          d.vy += kick.fy * 1.6;
+          d.glow = Math.max(d.glow, kick.fade);
         }
 
         // Springy return home — underdamped so dots wobble.
@@ -161,6 +175,7 @@ export default function ParticleField() {
       running = false;
       disturbance.origin = null;
       disturbance.pointer = null;
+      disturbance.burst = null;
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("pointermove", onPointerMove);

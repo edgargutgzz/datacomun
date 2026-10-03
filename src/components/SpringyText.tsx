@@ -1,11 +1,13 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { disturbance } from "@/lib/disturbance";
+import { burstPush, disturbance } from "@/lib/disturbance";
 
 const PUSH_RADIUS = 150;
 const PUSH_FORCE = 1.6;
 const SPRING = 0.06;
 const DAMPING = 0.84;
+const BURST_BAND = 40;
+const BURST_FORCE = 1.2;
 
 type Letter = { el: HTMLSpanElement; hx: number; hy: number; x: number; y: number; vx: number; vy: number };
 
@@ -46,7 +48,7 @@ export default function SpringyText({ text, highlight }: { text: string; highlig
     };
 
     let measured = false;
-    const loop = () => {
+    const loop = (now: number) => {
       if (!running) return;
       if (!measured) measured = measure();
       const { pointer } = disturbance;
@@ -64,6 +66,12 @@ export default function SpringyText({ text, highlight }: { text: string; highlig
             l.vx += (dx / dist) * f;
             l.vy += (dy / dist) * f;
           }
+        }
+
+        const kick = burstPush(l.hx, l.hy, now, BURST_BAND);
+        if (kick) {
+          l.vx += kick.fx * BURST_FORCE;
+          l.vy += kick.fy * BURST_FORCE;
         }
 
         l.vx = (l.vx - l.x * SPRING) * DAMPING;
