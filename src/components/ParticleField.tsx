@@ -146,6 +146,12 @@ export default function ParticleField() {
     const onPointerUp = (e: PointerEvent) => {
       if (e.pointerType !== "mouse") pointer = null;
     };
+    // Touch can't hover, so a tap sets off a burst instead.
+    const onPointerDown = (e: PointerEvent) => {
+      if (e.pointerType === "mouse") return;
+      const p = toLocal(e.clientX, e.clientY);
+      if (p) disturbance.burst = { x: p.x, y: p.y, start: performance.now() };
+    };
 
     const onVisibility = () => {
       running = !document.hidden;
@@ -169,6 +175,7 @@ export default function ParticleField() {
     window.addEventListener("resize", onResize);
     window.addEventListener("pointermove", onPointerMove, { passive: true });
     window.addEventListener("pointerup", onPointerUp, { passive: true });
+    window.addEventListener("pointerdown", onPointerDown, { passive: true });
     document.documentElement.addEventListener("pointerleave", onPointerLeave);
     document.addEventListener("visibilitychange", onVisibility);
     return () => {
@@ -180,6 +187,7 @@ export default function ParticleField() {
       window.removeEventListener("resize", onResize);
       window.removeEventListener("pointermove", onPointerMove);
       window.removeEventListener("pointerup", onPointerUp);
+      window.removeEventListener("pointerdown", onPointerDown);
       document.documentElement.removeEventListener("pointerleave", onPointerLeave);
       document.removeEventListener("visibilitychange", onVisibility);
     };
