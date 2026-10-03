@@ -10,14 +10,14 @@ const SHOW_COVERAGE = false;
 
 export default function Home() {
   return (
-    <div className="px-4 md:px-6 py-3 md:py-5">
+    <div className={SHOW_COVERAGE ? "px-4 md:px-6 py-3 md:py-5" : ""}>
 
-      {/* Hero — split screen */}
-      <div className={`md:min-h-[calc(100vh-2.5rem)] grid ${SHOW_COVERAGE ? "min-h-[calc(100vh-1.5rem)] md:grid-cols-[1.2fr_0.8fr]" : ""}`}>
+      {/* Hero — full-bleed, or split screen with the coverage chart */}
+      <div className={`grid ${SHOW_COVERAGE ? "min-h-[calc(100vh-1.5rem)] md:min-h-[calc(100vh-2.5rem)] md:grid-cols-[1.2fr_0.8fr]" : "min-h-svh"}`}>
 
         {/* Left column — nav + copy */}
         <div
-          className={`relative flex flex-col overflow-hidden md:min-h-[calc(100vh-2.5rem)] ${SHOW_COVERAGE ? "rounded-t-3xl md:rounded-tr-none md:rounded-bl-3xl" : "min-h-[calc(100svh-1.5rem)] rounded-3xl"}`}
+          className={`relative flex flex-col overflow-hidden ${SHOW_COVERAGE ? "md:min-h-[calc(100vh-2.5rem)] rounded-t-3xl md:rounded-tr-none md:rounded-bl-3xl" : "min-h-svh"}`}
           style={{
             background: "radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 10%, rgba(139,92,246,0.14) 0%, transparent 55%), #f9f7f4",
           }}
