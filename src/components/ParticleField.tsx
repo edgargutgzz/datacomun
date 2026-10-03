@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { burstPush, burstSpeed, disturbance } from "@/lib/disturbance";
+import { burstPush, disturbance } from "@/lib/disturbance";
 
 // Brand cycle: cyan → violet → pink
 const PALETTE: [number, number, number][] = [
@@ -84,7 +84,7 @@ export default function ParticleField() {
       disturbance.origin = canvas;
       disturbance.pointer = pointer;
       if (!burstFired && now - mountedAt > BURST_DELAY) {
-        disturbance.burst = { x: w * 0.5, y: h * 0.5, start: now, speed: burstSpeed(w) };
+        disturbance.burst = { x: w * 0.5, y: h * 0.5, start: now };
         burstFired = true;
       }
 
@@ -148,7 +148,7 @@ export default function ParticleField() {
     const onPointerDown = (e: PointerEvent) => {
       if (e.pointerType === "mouse") return;
       const p = toLocal(e.clientX, e.clientY);
-      if (p) disturbance.burst = { x: p.x, y: p.y, start: performance.now(), speed: burstSpeed(w) };
+      if (p) disturbance.burst = { x: p.x, y: p.y, start: performance.now() };
     };
 
     const onVisibility = () => {
