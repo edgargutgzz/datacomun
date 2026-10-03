@@ -87,7 +87,6 @@ export default function ParticleField() {
     const draw = (now: number) => {
       const t = now / 4000;
       ctx.clearRect(0, 0, w, h);
-      const diag = Math.hypot(w, h);
 
       ripples = ripples.filter((r) => now - r.start < RIPPLE_LIFE);
       if (!reduceMotion && now - lastInteraction > IDLE_RIPPLE_EVERY) {
@@ -136,9 +135,8 @@ export default function ParticleField() {
         d.glow *= 0.96;
 
         const v = (field(d.hx, d.hy, t) + 2) / 4; // ~0..1
-        // Calmer toward the bottom-left, where the headline sits.
-        const reach = Math.min((Math.hypot(d.hx, h - d.hy) / diag) * 1.4, 1);
-        const alpha = Math.min(v * v * reach * 0.55 + d.glow * 0.8, 0.95);
+        // Invisible at rest — dots only show up where something stirs them.
+        const alpha = Math.min(d.glow * 0.9, 0.95);
         if (alpha < 0.03) continue;
 
         const [r, g, b] = mix(tint >= 0 ? tint : (d.hx / w) * 0.6 + v * 0.25 + t * 0.05);
