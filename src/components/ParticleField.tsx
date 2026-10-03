@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { disturbance, RIPPLE_LIFE, RIPPLE_SPEED, type Ripple } from "@/lib/disturbance";
 
 // Brand cycle: cyan → violet → pink
 const PALETTE: [number, number, number][] = [
@@ -13,12 +14,9 @@ const MAX_RADIUS = 2.4;
 const PUSH_RADIUS = 110;
 const SPRING = 0.045;
 const DAMPING = 0.86;
-const RIPPLE_SPEED = 0.55; // px per ms
-const RIPPLE_LIFE = 1600; // ms
 const IDLE_RIPPLE_EVERY = 3200; // ms without interaction before a ripple appears on its own
 
 type Dot = { hx: number; hy: number; x: number; y: number; vx: number; vy: number; glow: number };
-type Ripple = { x: number; y: number; start: number; hue: number };
 
 function mix(t: number): [number, number, number] {
   const s = (((t % 1) + 1) % 1) * PALETTE.length;
@@ -93,6 +91,9 @@ export default function ParticleField() {
         addRipple(w * (0.35 + Math.random() * 0.6), h * (0.05 + Math.random() * 0.5), now);
         lastInteraction = now;
       }
+      disturbance.origin = canvas;
+      disturbance.pointer = pointer;
+      disturbance.ripples = ripples;
 
       for (const d of dots) {
         // Cursor pushes dots away.
@@ -200,6 +201,9 @@ export default function ParticleField() {
     document.addEventListener("visibilitychange", onVisibility);
     return () => {
       running = false;
+      disturbance.origin = null;
+      disturbance.pointer = null;
+      disturbance.ripples = [];
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("pointermove", onPointerMove);
