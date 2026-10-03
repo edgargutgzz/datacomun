@@ -136,15 +136,13 @@ export default function ParticleField() {
       raf = requestAnimationFrame(loop);
     };
 
+    // Only a mouse pushes things around; on touch, dragging doesn't feel right.
     const onPointerMove = (e: PointerEvent) => {
+      if (e.pointerType !== "mouse") return;
       pointer = toLocal(e.clientX, e.clientY);
     };
     const onPointerLeave = () => {
       pointer = null;
-    };
-    // Fingers don't hover — let go of the push once a touch ends.
-    const onPointerUp = (e: PointerEvent) => {
-      if (e.pointerType !== "mouse") pointer = null;
     };
     // Touch can't hover, so a tap sets off a burst instead.
     const onPointerDown = (e: PointerEvent) => {
@@ -174,7 +172,6 @@ export default function ParticleField() {
     raf = requestAnimationFrame(loop);
     window.addEventListener("resize", onResize);
     window.addEventListener("pointermove", onPointerMove, { passive: true });
-    window.addEventListener("pointerup", onPointerUp, { passive: true });
     window.addEventListener("pointerdown", onPointerDown, { passive: true });
     document.documentElement.addEventListener("pointerleave", onPointerLeave);
     document.addEventListener("visibilitychange", onVisibility);
@@ -186,7 +183,6 @@ export default function ParticleField() {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("pointermove", onPointerMove);
-      window.removeEventListener("pointerup", onPointerUp);
       window.removeEventListener("pointerdown", onPointerDown);
       document.documentElement.removeEventListener("pointerleave", onPointerLeave);
       document.removeEventListener("visibilitychange", onVisibility);
