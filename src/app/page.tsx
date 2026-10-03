@@ -27,12 +27,12 @@ export default function Home() {
 
 
           {/* Nav */}
-          <header className="relative z-10 flex items-center justify-between px-4 md:px-10 py-7">
+          <header className="relative z-10 flex items-center justify-between px-6 md:px-10 py-7">
             <Logo size="text-xl" />
           </header>
 
           {/* Copy */}
-          <div className="relative z-10 flex flex-col justify-end flex-1 px-4 md:px-10 pt-10 pb-8 md:pt-0 md:pb-11">
+          <div className="relative z-10 flex flex-col justify-end flex-1 px-6 md:px-10 pt-10 pb-8 md:pt-0 md:pb-11">
             <h1 className="max-w-[18ch] text-[2.6rem] sm:text-[2.6rem] md:text-8xl xl:text-[7.5rem] font-semibold text-[#0f172a] leading-[1.02] tracking-tight">
               <SpringyText text="Recolectar, limpiar y comunicar datos públicos." highlight="datos públicos" />
             </h1>
