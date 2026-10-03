@@ -36,6 +36,15 @@ body {
   animation: colorCycle 6s ease-in-out infinite;
 }
 
+/* Full-screen pages (the homepage hero) don't scroll or rubber-band */
+html:has(.lock-scroll),
+html:has(.lock-scroll) body {
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
 /* Focus visible for accessibility */
 :focus-visible {
   outline: 2px solid var(--color-accent);
